@@ -41,6 +41,182 @@ public class Utility {
 		
 		return Operation1 ;
 	}
+	/******************************************************************************
+
+	    *  Purpose: to Check the given year is a leap year or not
+	    /**
+	    * @param year  take input from user to check the leap year
+	    * @return      return weather the given year is a leap year or not
+	    */
+	   public boolean LeapyearChecker(int year) {
+	   	 if(year%4==0 ||  year%400==0 && year%100 !=0) {
+	   		 return true ;
+	   	 }
+	   	 
+	   	 else {
+	   		 return false;
+	   	 }
+	    }
+	    
+	    
+	    /********************************************************************************************************
+
+	    Purpose: to print on which day the particular date falls
+	   
+	    * @return  
+	    */
+	    
+	    public boolean DaysWeek(int date , int month , boolean LeapyearChecker){
+	    	
+	    	switch(month){
+	    		
+	    		case 1 :
+	    			if(date >=1 &&  date <=31) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			   
+	    			
+			case 2 :
+	    			if(LeapyearChecker)
+	    			{
+	    				if(date >= 1 && date <=29  ) 
+	    				{
+	    					return true ;
+	    				}
+	    				else {
+	    					return false;
+	    				}
+	    			}
+	    			else {
+	    				
+	    			if (date >= 1 && date <=28  ) {
+						return true ;
+					}
+	    			else {
+	    				return false;
+	    			}
+	    			}
+	    			
+	    			
+	    			
+	    			
+	    		case 3 :
+	    			  if(date >0 &&  date <=31) {
+	    				return true;
+	    			  }
+	    			 else {
+	    				return false;
+	    			  }
+	    			 
+	    			
+	    		case 4 :
+	    			if(date >0 &&  date <=30) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    		
+	    		
+	    		case 5 :
+	    			if(date >0 &&  date <=31) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    		
+	    			
+	    		case 6 :
+	    			if(date >0 &&  date <=30) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			
+	    		case 7 :
+	    			if(date >0 &&  date <=31) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			
+	    		case 8 :
+	    			if(date >0 &&  date <=31) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			
+	    		case 9 :
+	    			if(date >0 &&  date <=30) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			
+	    		case 10 :
+	    			if(date >0 &&  date <=31) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			
+	    		case 11 :
+	    			if(date >0 &&  date <=30) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			
+	    		case 12 :
+	    			if(date >0 &&  date <=31) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    		
+	    		}
+	     return false;
+	    }
+	    
+	    
+	    /********************************************************************************************************
+
+	    Purpose: to print on which day the particular date falls
+
+	    * @return  
+	    */
+	        
+	        public int DayValidate(int date , int month , int year) {
+	        	
+	        	int y1=year-(14-month)/12;
+	        	int x= y1+(y1/4)-(y1/100)+(y1/400);
+	        	int m1=month+12*((14-month)/12)-2;
+	        	int d1=(int)(date+x+31*m1/12)%7;
+	        	
+	        	return d1;
+	        	
+	        	
+	        }
+	        
 /****************************************************************************************************/
 	 
 	
@@ -418,6 +594,10 @@ Purpose: to print percentage of head and tails
 		
 		
 	}
+	/********************************************************************************************************
+
+	   Purpose: to print the even number in a given range 
+	   */
 	
 	
 
@@ -425,17 +605,16 @@ Purpose: to print percentage of head and tails
 
    Purpose: to print the even number in a given range 
    */
-	public void  Prime(int range) {
+	public void  Prime(int rangestart , int rangeend) {
 		
-		for(int i = 2 ; i <= range ; i ++) {
+		for(int i = rangestart ; i <= rangeend ; i ++) {
 			
-				if(i%1 ==0 && i%i==0) {
-					System.out.println(i);
-				}
+			
+			}
 				
 			
 		}
 	}
-}
+
 
 

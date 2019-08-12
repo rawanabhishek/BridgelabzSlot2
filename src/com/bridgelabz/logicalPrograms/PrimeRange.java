@@ -11,10 +11,13 @@ public class PrimeRange {
 		Scanner  scanner = new Scanner(System.in);
 	       Utility utility = new Utility();
 	       
-	       System.out.println("Enter the range  : ");
-	       int range = scanner.nextInt();
+	       System.out.println("Enter the start range  : ");
+	       int rangestart = scanner.nextInt();
 	       
-	       utility.Prime(range);
+	       System.out.println("Enter the end range  : ");
+	       int rangeend = scanner.nextInt();
+	       
+	      
 	       
 	       scanner.close();
 		
