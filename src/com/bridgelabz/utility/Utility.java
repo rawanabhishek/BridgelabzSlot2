@@ -216,6 +216,42 @@ public class Utility {
 	        	
 	        	
 	        }
+	        /********************************************************************************************************
+
+	        Purpose: to find The loan amount for a given period of time with given intrest
+	       
+	        * @return  Payement to be made per month 
+	        */
+	        
+	        
+	        public double Interest(double principal , double years , double rate ) {
+	        	 double R = rate/(12*100);
+	        	 double N =12*years ;
+	        	 double Payment = (principal*R)/(1-Math.pow(1+R, -N));
+	        	 
+	        	 return  Payment ;
+	        }
+	        
+	        /********************************************************************************************************
+
+	        Purpose: to  print various trignometric function 
+	       
+	        * @return  return the value of given trignomertic function
+	        */
+	        
+	        public String Trigonmetric(double angle) {
+	        	double radian = Math.toRadians(angle);
+	        	double sin = Math.sin(radian);
+	        	double cos = Math.cos(radian);
+	        	double tan =Math.tan(radian);
+	        	double cosec=1/Math.sin(radian);
+	        	double sec =1/Math.cos(radian);
+	        	double cot = 1/Math.tan(radian);
+	        	
+	        	return "Sin :"+sin+ "\ncos :"+cos+"\ntan :"+tan+"\nCosec :"+cosec+"\nsec :"+sec+"\ncot :"+cot ; 
+	        
+	        	
+	        }
 	        
 /****************************************************************************************************/
 	 
