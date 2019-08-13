@@ -878,6 +878,66 @@ Purpose: to print percentage of head and tails
 	 }
 	 
 	 
+	 /********************************************************************************************************
+
+	   Purpose: to find the second largest number in an unsorted array
+	   
+	   */
+	 
+	 public int secondlarge(int arr[]) {
+		 int First =Integer.MIN_VALUE;
+		 int Second=Integer.MIN_VALUE;
+		 for(int i = 0 ; i<arr.length ; i ++) {
+			 if(arr[i]>First) {
+				 Second =First;
+				 First =arr[i];
+			 }
+			 else if (arr[i]> Second && arr[i]!=First){
+				 Second=First;
+			 }
+			 
+			 
+			 
+		 }
+		 
+		 return Second;
+		 
+		 
+		 
+		 
+		 
+	 }
+	 
+	 
+	 /********************************************************************************************************
+
+	   Purpose: to find the second smallest number in an unsorted array
+	   
+	   */
+	 
+	 public int secondsmallest(int arr[]) {
+		 int First =Integer.MAX_VALUE;
+		 int Second=Integer.MAX_VALUE;
+		 for(int i = 0 ; i<arr.length ; i ++) {
+			 if(arr[i]<First) {
+				 Second =First;
+				 First =arr[i];
+			 }
+			 else if (arr[i]< Second && arr[i]!=First){
+				 Second=arr[i];
+			 }
+			 
+			 
+			 
+		 }
+		 
+		 return Second;
+		 
+		 
+		 
+		 
+		 
+	 }
 	 
 	   
 	
