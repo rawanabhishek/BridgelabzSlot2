@@ -17,7 +17,7 @@ public class PrimeRange {
 	       System.out.println("Enter the end range  : ");
 	       int rangeend = scanner.nextInt();
 	       
-	      
+	      utility.Prime(rangestart, rangeend);
 	       
 	       scanner.close();
 		

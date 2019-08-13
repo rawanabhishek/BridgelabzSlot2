@@ -1,3 +1,12 @@
+/******************************************************************************
+ 
+ *  Purpose: To print table of power of 2 upto n numbers
+ *
+ *  @author  Abhishek Rawat
+ *  @version 1.0
+ *  @since   12-08-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.logicalPrograms;
 
 import java.util.Scanner;

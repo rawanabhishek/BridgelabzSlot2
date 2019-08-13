@@ -634,22 +634,253 @@ Purpose: to print percentage of head and tails
 
 	   Purpose: to print the even number in a given range 
 	   */
-	
-	
+	   
 
-	 /********************************************************************************************************
-
-   Purpose: to print the even number in a given range 
-   */
+	
 	public void  Prime(int rangestart , int rangeend) {
+		int temp=0;
+		
 		
 		for(int i = rangestart ; i <= rangeend ; i ++) {
+			for(int j =2 ;j<i;j++) {
+				if(i%j==0) {
+					temp=temp+1;
+				}
+			}
+			if(temp==0) {
+				System.out.println(i);
+			}
+			 
+			temp=0;  
+			}
 			
+		
+	}
+	
+	/********************************************************************************************************
+
+	   Purpose: to print the repeated number in an array
+	   */
+	   
+
+	 public int ReaptedArray(int array[]) {
+		 for(int i =0 ; i<array.length ; i++) {
+			 for(int j=i+1;j<array.length;j++) {
+				 if(array[i] == array[j]) {
+					 return array[i];
+				 }
+			 }
+		 }
+		 return 1;
+	 }
+	 
+	 /********************************************************************************************************
+
+	   Purpose: to convert a decimal number into a binary number 
+	   */
+	 
+	 public void decimaltobinary(int num) {
+		 
+		 int rem [] = new int [num];
+		 
+		 int index =0;
+		 
+		 while(num>0) {
+			 rem[index]=num%2;
+			 index++;
+			 num=num/2;
+		 }
+		 
+		/* while(rem.length <=8 ) {
+			 rem[index] =0;
+			 index++;
+		 } */
+		
+		 for(int i=(index-1); i >=0 ; i--) {
+			 
+			 System.out.print(rem[i]);
+			 
+		 }
+		
+		 }
+	 
+	 public int swapnibble(int x) {
+		 return (((x&0x0F)<<4)|((x&0xF0)>>4));
+	 }
+	 
+	 
+	 /********************************************************************************************************
+
+	   Purpose: to print which number falls max time between 1 to 6
+	   
+	   */
+	 
+	 
+	 public void diceroll(int num) {
+        int value;
+		int side =6;
+		 int side1=0;
+	     int side2=0;
+	     int side3=0;
+	     int side4=0;
+	     int side5=0;
+	     int side6=0;
+		 for(int i =0 ; i <num ; i ++) {
+	     
+		    	
+			value=1+(int)(Math.random()*side);
+			System.out.println(value);
+			if(value==0) {
+			side1++;
+		    }
+			else if (value==1) {
+				side2++;
+				
+			}
+			else if(value==2) {
+				side3++;
+				}
+			
+			else if (value==3) {
+				side4++;
 			
 			}
-				
 			
-		}
+			else if(value==4) {
+				side5++;
+				
+			}
+			else if(value==5) {
+				side6++;
+				
+				
+			}
+			 
+			
+		 }
+		 
+		 int arr[]= {side1,side2,side3,side4,side5,side6};
+		 int max=Integer.MIN_VALUE;
+		 int temp =0;
+		 
+		 for(int i=0;i<arr.length;i++) {
+			 if(max<arr[i]) {
+				 max=arr[i];
+				 temp=i;
+			 }
+			 
+		 }
+		 
+		 System.out.println("maximum time a face has come up while rolling dice is : "+temp);
+
+		 
+	 } 
+	 /********************************************************************************************************
+
+	   Purpose: to print factorial of a number
+	   
+	   */
+	 public int Factorial(int n) {
+		 int fact=1;
+		 if(n==0) {
+			
+			 return 1;
+			 
+		 }
+		 else {
+			 return n*Factorial(n-1);
+		 }
+		 
+	 }
+	 
+	 
+	 
+	 /********************************************************************************************************
+
+	   Purpose: to perform sin taylor series
+	   
+	   */
+	 
+	 
+	 
+	 public void sintaylor(double angle) {
+		 
+		 double x = angle%(2*Math.PI);
+		 int n ;
+		 
+		 System.out.println("sin x = "+x+" - "+(Math.pow(x,3))/Factorial(3)+" + "+(Math.pow(x, 5))/Factorial(5)+" - "
+		                             +(Math.pow(x,7 ))/Factorial(7)+" +.....");
+		 
+		 
+		 
+		 
+		 
+		 
+	 }
+	 
+	 
+	 /********************************************************************************************************
+
+	   Purpose: to perform cos taylor series
+	   
+	   */
+	 
+	 
+	 
+	 public void costaylor(double angle) {
+		 
+		 double x = angle%(2*Math.PI);
+		 int n ;
+		 
+		 System.out.println("cos x = 1 - "+(Math.pow(x,2))/Factorial(2)+" + "+(Math.pow(x, 4))/Factorial(4)+" - "
+		                             +(Math.pow(x,6 ))/Factorial(6)+" +.....");
+		 
+		 
+		 
+		  }
+	 /********************************************************************************************************
+
+	   Purpose: to prime checker
+	   
+	   */
+	 public boolean primechecker(int number){
+	   for(int i =2 ;i<number/2;i++) {
+			if(number%i==0) {
+				return false;
+			}
+			
+			}
+	   return true;
+	   
+	 }
+		
+	    
+	 /********************************************************************************************************
+
+	   Purpose: to compute factor of number using prime factorization
+	   
+	   */
+	 
+	 public void factorcompute(int number) {
+		 
+		 for(int i=2;i*i<=number ; i++ ) {
+			 while(number%i==0) {
+				 System.out.print(i + " "); 
+	                number = number / i;
+			 }
+			
+		 }
+		 
+		if (number > 1) System.out.println(number);
+	        else       System.out.println();
+	        
+	       
+	 }
+	 
+	 
+	 
+	   
+	
 	}
 
 

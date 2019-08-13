@@ -7,7 +7,7 @@
  *  @since   10-08-2019
  *
  ******************************************************************************/
-package com.bridgelabz.functional;
+package com.bridgelabz.trigonomerty;
 
 import java.util.Scanner;
 
