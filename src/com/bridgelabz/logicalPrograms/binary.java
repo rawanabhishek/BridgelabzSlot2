@@ -23,6 +23,8 @@ public class binary {
 	       int num = scanner.nextInt();
 	       
 	       utility.decimaltobinary(num);
+	       
+	       System.out.println();
 	       int z= utility.swapnibble(num);
 	       System.out.println("result" +z);
 	       scanner.close();

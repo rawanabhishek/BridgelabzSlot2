@@ -9,6 +9,7 @@
  ******************************************************************************/
 package com.bridgelabz.utility;
 
+import java.util.Arrays;
 
 /**
  * @author user
@@ -771,7 +772,7 @@ Purpose: to print percentage of head and tails
 			 
 		 }
 		 
-		 System.out.println("maximum time a face has come up while rolling dice is : "+temp);
+		 System.out.println("the number which has fall maximum time is  : "+temp);
 
 		 
 	 } 
@@ -808,7 +809,7 @@ Purpose: to print percentage of head and tails
 		 double x = angle%(2*Math.PI);
 		 int n ;
 		 
-		 System.out.println("sin x = "+x+" - "+(Math.pow(x,3))/Factorial(3)+" + "+(Math.pow(x, 5))/Factorial(5)+" - "
+		 System.out.println("sin "+angle+"  = "+x+" - "+(Math.pow(x,3))/Factorial(3)+" + "+(Math.pow(x, 5))/Factorial(5)+" - "
 		                             +(Math.pow(x,7 ))/Factorial(7)+" +.....");
 		 
 		 
@@ -832,7 +833,7 @@ Purpose: to print percentage of head and tails
 		 double x = angle%(2*Math.PI);
 		 int n ;
 		 
-		 System.out.println("cos x = 1 - "+(Math.pow(x,2))/Factorial(2)+" + "+(Math.pow(x, 4))/Factorial(4)+" - "
+		 System.out.println("cos "+angle+"  = 1 - "+(Math.pow(x,2))/Factorial(2)+" + "+(Math.pow(x, 4))/Factorial(4)+" - "
 		                             +(Math.pow(x,6 ))/Factorial(6)+" +.....");
 		 
 		 
@@ -902,11 +903,7 @@ Purpose: to print percentage of head and tails
 		 
 		 return Second;
 		 
-		 
-		 
-		 
-		 
-	 }
+		  }
 	 
 	 
 	 /********************************************************************************************************
@@ -927,17 +924,33 @@ Purpose: to print percentage of head and tails
 				 Second=arr[i];
 			 }
 			 
-			 
-			 
-		 }
+			  }
 		 
 		 return Second;
 		 
+		 }
+	 
+	 /********************************************************************************************************
+
+	   Purpose: to check weather the given number is anagram or not
+	   
+	   */
+	 
+	 
+	 public boolean Anagram(String one , String two ) {
 		 
+		 char arr1[]=one.toCharArray();
 		 
+		 char arr2[]=two.toCharArray();
 		 
-		 
+		Arrays.sort(arr1);
+		Arrays.sort(arr2);
+		
+		boolean result =Arrays.equals(arr1, arr2);
+		return result;
+		
 	 }
+	 
 	 
 	   
 	
