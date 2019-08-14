@@ -11,10 +11,18 @@
  ******************************************************************************/
 package com.bridgelabz.functional;
 
+import java.util.Scanner;
+
 public class PrintInitials {
 
 	public static void main(String[] args) {
-		
+	  Scanner scanner = new Scanner(System.in);
+	  
+	  System.out.println("Enter the character you want to print from K , D ,W  : ");
+	  char inital= scanner.nextLine().charAt(0);
+	  
+	  
+	  if(inital=='k') {
 		for(int i =0;i<=8;i++) {
 			for(int j=0;j<13;j++) {
 				if((i==0 || i==8 ) && (j==0 || j==1 || j==10 || j==11 || j==12)){
@@ -43,13 +51,17 @@ public class PrintInitials {
 					System.out.print(" ");
 				}
 				
-			}	
-			
+				
+			}
+			System.out.println();
+		}
+		}
 			//to print space
-			System.out.print("  ");
+			//System.out.print("  ");
 			
 			//to print D 
-			
+		else if(inital=='d') {
+			for(int i =0;i<=8;i++) {
 			for(int j=0 ;j<=13 ; j++) {
 				if((i==0 || i==8 ) && (j==0 || j==1 || j==2 || j==3 || j==4 || j==5 || j==6 || j==7 || j==8 || j==9)){
 					System.out.print("*");
@@ -70,14 +82,18 @@ public class PrintInitials {
 				else {
 					System.out.print(" ");
 				}
-		
+				
+			  }
+			System.out.println();
+			}
 		}
 			
 			//to print space
-			System.out.print("  ");
+			//System.out.print("  ");
 			
 			//to print W 
-			
+			else if(inital=='w') {
+				for(int i =0;i<=8;i++) {
 			for(int j=0 ;j<=30 ; j++) {
 				if((i==0  ) && (j==0 || j==1 || j==15 || j==29 || j==30 )){
 					System.out.print("*");
@@ -120,9 +136,10 @@ public class PrintInitials {
 				else {
 					System.out.print(" ");
 				}
-		
-		}
+				
+		      }
 			System.out.println();
+			}
 			
 	}
 

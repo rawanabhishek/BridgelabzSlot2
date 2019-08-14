@@ -843,8 +843,10 @@ Purpose: to print percentage of head and tails
 
 	   Purpose: to prime checker
 	   
-	   */
-	 public boolean primechecker(int number){
+	 * @param number check weather the given number is prime or not 
+	 * @return
+	 */
+	public boolean primechecker(int number){
 	   for(int i =2 ;i<number/2;i++) {
 			if(number%i==0) {
 				return false;
@@ -883,9 +885,11 @@ Purpose: to print percentage of head and tails
 
 	   Purpose: to find the second largest number in an unsorted array
 	   
-	   */
-	 
-	 public int secondlarge(int arr[]) {
+	
+	 * @param arr   take an unsorted array from the main class 
+	 * @return
+	 */
+	public int secondlarge(int arr[]) {
 		 int First =Integer.MIN_VALUE;
 		 int Second=Integer.MIN_VALUE;
 		 for(int i = 0 ; i<arr.length ; i ++) {
@@ -910,9 +914,11 @@ Purpose: to print percentage of head and tails
 
 	   Purpose: to find the second smallest number in an unsorted array
 	   
-	   */
-	 
-	 public int secondsmallest(int arr[]) {
+
+	 * @param arr take an unsorted array from the main class
+	 * @return
+	 */
+	public int secondsmallest(int arr[]) {
 		 int First =Integer.MAX_VALUE;
 		 int Second=Integer.MAX_VALUE;
 		 for(int i = 0 ; i<arr.length ; i ++) {
@@ -932,12 +938,13 @@ Purpose: to print percentage of head and tails
 	 
 	 /********************************************************************************************************
 
-	   Purpose: to check weather the given number is anagram or not
-	   
-	   */
-	 
-	 
-	 public boolean Anagram(String one , String two ) {
+	   Purpose: to check weather the given string is anagram or not
+	
+	 * @param one  take the value of first string from user
+	 * @param two  take the value of second string from user
+	 * @return  boolean true if the strings are anagram else false
+	 */
+	public boolean Anagram(String one , String two ) {
 		 
 		 char arr1[]=one.toCharArray();
 		 
@@ -951,7 +958,38 @@ Purpose: to print percentage of head and tails
 		
 	 }
 	 
+	 /********************************************************************************************************
+
+	   Purpose: to check weather the given string is pallindrome  or not
+	   
+	   */
 	 
+	 
+	 public boolean pallindrom(String pallindrome) {
+		 String temppalin ="" ;
+		 int length=pallindrome.length();
+		 for(int i = length-1 ; i>=0;i--) {
+			 temppalin=temppalin+ pallindrome.charAt(i);
+			 }
+		 
+		 if(pallindrome.equals(temppalin)) {
+			 return true;
+		 }
+		 else {
+			 return false;
+		 }
+		 
+		 
+		 }
+	 
+	 
+	 /********************************************************************************************************
+
+	   Purpose: to print permutation of a string 
+	   
+	   */
+	 
+	  
 	   
 	
 	}
