@@ -7,7 +7,7 @@
  *  @since   14-08-2019
  *
  ******************************************************************************/
-package FunctionsAndLibraries;
+package com.bridgelabz.functionalAndLibraries;
 
 import java.util.Scanner;
 
