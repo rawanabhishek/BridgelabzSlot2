@@ -28,6 +28,7 @@ public class binary {
 	       int z= utility.swapnibble(num);
 	       System.out.println("result" +z);
 	       scanner.close();
+	       
 	}
 
 }

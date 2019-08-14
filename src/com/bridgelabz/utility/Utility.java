@@ -206,7 +206,7 @@ public class Utility {
 	    * @return  
 	    */
 	        
-	        public int DayValidate(int date , int month , int year) {
+	        public static int DayValidate(int date , int month , int year) {
 	        	
 	        	int y1=year-(14-month)/12;
 	        	int x= y1+(y1/4)-(y1/100)+(y1/400);
@@ -985,9 +985,141 @@ Purpose: to print percentage of head and tails
 	 
 	 /********************************************************************************************************
 
-	   Purpose: to print permutation of a string 
+	   Purpose: To print days of week using Satic Function 
 	   
 	   */
+	 
+	 
+	 public  static boolean DaysWeekstatic(int date , int month , boolean LeapyearChecker){
+	    	
+	    	switch(month){
+	    		
+	    		case 1 :
+	    			if(date >=1 &&  date <=31) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			   
+	    			
+			case 2 :
+	    			if(LeapyearChecker)
+	    			{
+	    				if(date >= 1 && date <=29  ) 
+	    				{
+	    					return true ;
+	    				}
+	    				else {
+	    					return false;
+	    				}
+	    			}
+	    			else {
+	    				
+	    			if (date >= 1 && date <=28  ) {
+						return true ;
+					}
+	    			else {
+	    				return false;
+	    			}
+	    			}
+	    			
+	    			
+	    			
+	    			
+	    		case 3 :
+	    			  if(date >0 &&  date <=31) {
+	    				return true;
+	    			  }
+	    			 else {
+	    				return false;
+	    			  }
+	    			 
+	    			
+	    		case 4 :
+	    			if(date >0 &&  date <=30) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    		
+	    		
+	    		case 5 :
+	    			if(date >0 &&  date <=31) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    		
+	    			
+	    		case 6 :
+	    			if(date >0 &&  date <=30) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			
+	    		case 7 :
+	    			if(date >0 &&  date <=31) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			
+	    		case 8 :
+	    			if(date >0 &&  date <=31) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			
+	    		case 9 :
+	    			if(date >0 &&  date <=30) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			
+	    		case 10 :
+	    			if(date >0 &&  date <=31) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			
+	    		case 11 :
+	    			if(date >0 &&  date <=30) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    			
+	    			
+	    		case 12 :
+	    			if(date >0 &&  date <=31) {
+	    				return true;
+	    			}
+	    			else {
+	    				return false;
+	    			}
+	    		
+	    		}
+	     return false;
+	    }
 	 
 	  
 	   
