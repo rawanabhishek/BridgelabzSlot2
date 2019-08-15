@@ -28,9 +28,9 @@ public class Utility {
 		return result ;
 	}
 	
-/****************************************************************************************************/
+     /****************************************************************************************************
 	
-	 /**
+	
      * @param a Take  input value a from user
      * @param b Take  input value b from user
      * @param c Take input value c from user
@@ -42,13 +42,12 @@ public class Utility {
 		
 		return Operation1 ;
 	}
-	/******************************************************************************
+    /******************************************************************************
 
-	    *  Purpose: to Check the given year is a leap year or not
-	    /**
-	    * @param year  take input from user to check the leap year
-	    * @return      return weather the given year is a leap year or not
-	    */
+     *  Purpose: to Check the given year is a leap year or not
+     * @param year  take input from user to check the leap year
+     * @return      return weather the given year is a leap year or not
+     */
 	   public boolean LeapyearChecker(int year) {
 	   	 if(year%4==0 ||  year%400==0 && year%100 !=0) {
 	   		 return true ;
@@ -60,12 +59,11 @@ public class Utility {
 	    }
 	    
 	    
-	    /********************************************************************************************************
+    /*************************************************************************************
 
-	    Purpose: to print on which day the particular date falls
-	   
-	    * @return  
-	    */
+     *  Purpose: to print on which day the particular date falls
+     * @return  
+     */
 	    
 	    public boolean DaysWeek(int date , int month , boolean LeapyearChecker){
 	    	
@@ -199,12 +197,12 @@ public class Utility {
 	    }
 	    
 	    
-	    /********************************************************************************************************
+       /********************************************************************************************************
 
-	    Purpose: to print on which day the particular date falls
+	* Purpose: to print on which day the particular date falls
 
-	    * @return  
-	    */
+	 * @return  
+	 */
 	        
 	        public static int DayValidate(int date , int month , int year) {
 	        	
@@ -217,15 +215,16 @@ public class Utility {
 	        	
 	        	
 	        }
-	        /********************************************************************************************************
 
-	        Purpose: to find The loan amount for a given period of time with given intrest
+	/********************************************************************************************************
+
+	   * Purpose: to find The loan amount for a given period of time with given intrest
 	       
-	        * @return  Payement to be made per month 
+	   * @return  Payement to be made per month 
 	        */
 	        
 	        
-	        public double Interest(double principal , double years , double rate ) {
+	      public double Interest(double principal , double years , double rate ) {
 	        	 double R = rate/(12*100);
 	        	 double N =12*years ;
 	        	 double Payment = (principal*R)/(1-Math.pow(1+R, -N));
@@ -233,11 +232,11 @@ public class Utility {
 	        	 return  Payment ;
 	        }
 	        
-	        /********************************************************************************************************
+	   /********************************************************************************************************
 
-	        Purpose: to  print various trignometric function 
+	     * Purpose: to  print various trignometric function 
 	       
-	        * @return  return the value of given trignomertic function
+	     * @return  return the value of given trignomertic function
 	        */
 	        
 	        public String Trigonmetric(double angle) {
@@ -254,15 +253,13 @@ public class Utility {
 	        	
 	        }
 	        
-/****************************************************************************************************/
+        /****************************************************************************************************
 	 
-	
-	/**
-     * @param a Take  input value a from user
-     * @param b Take  input value b from user
-     * @param c Take input value c from user
-     * @return
-     */
+        * @param a Take  input value a from user
+        * @param b Take  input value b from user
+        * @param c Take input value c from user
+        * @return
+        */
 	
 	public int OperationTwo(int a ,int b ,int c ) {
 		
@@ -272,32 +269,31 @@ public class Utility {
 		return Operation2 ;
 	}
 	
-/****************************************************************************************************/
+       /****************************************************************************************************
 	 
-	/**
-     * @param a Take  input value a from user
-     * @param b Take  input value b from user
-     * @param c Take input value c from user
-     * @return
-     */
+	* @param a Take  input value a from user
+        * @param b Take  input value b from user
+        * @param c Take input value c from user
+        * @return
+        */
 	
-    public int OperationThree(int a, int b ,int c ) {
+       public int OperationThree(int a, int b ,int c ) {
 		
 		
 		int Operation3 =(a%b+c);
 		
 		return Operation3 ;
 	}
-  /****************************************************************************************************/
+
+      /****************************************************************************************************
     
-    
-    /**
-     * @param a Take  input value a from user
-     * @param b Take  input value b from user
-     * @param c Take input value c from user
-     * @return
-     */
-    public int OperationFour(int a, int b ,int c ) {
+      * @param a Take  input value a from user
+      * @param b Take  input value b from user
+      * @param c Take input value c from user
+      * @return
+      */
+
+      public int OperationFour(int a, int b ,int c ) {
 		
 		
 		int Operation4 =(a%b+c);
@@ -305,7 +301,7 @@ public class Utility {
 		return Operation4 ;
 	}
     
-/******************************************************************************
+     /***************************************************************************************************
     
      *  Purpose: To take 3 values from user and perform set of opertions on them to
      *           understand there presedence
@@ -315,13 +311,17 @@ public class Utility {
      * @param c Take input value c from user
      * @return
      */
+
+
     public double OperationOneDouble(double a , double b ,double c) {
 		double Operation1 = (a+b*c);
 		
 		
 		return Operation1 ;
 	}
-/**************************************************************************************************** 
+
+
+    /**************************************************************************************************** 
  
      * @param a Take  input value a from user
      * @param b Take  input value b from user
@@ -336,7 +336,8 @@ public class Utility {
 		
 		return Operation2 ;
 	}
-/****************************************************************************************************
+
+     /****************************************************************************************************
 	
 	 
      * @param a Take  input value a from user
@@ -345,16 +346,16 @@ public class Utility {
      * @return
      */
 	
-    public double OperationThreeDouble(double a, double b ,double c ) {
+     public double OperationThreeDouble(double a, double b ,double c ) {
 		
 		
 		double Operation3 =(a%b+c);
 		
 		return Operation3 ;
 	}
-/****************************************************************************************************
-    
-    
+
+    /****************************************************************************************************
+
      * @param a Take  input value a from user
      * @param b Take  input value b from user
      * @param c Take input value c from user
@@ -368,14 +369,14 @@ public class Utility {
 		return Operation4 ;
 	}
     
-/******************************************************************************
+     /******************************************************************************
 
      *  Purpose: to Check the given year is a leap year or not
-     /**
      * @param year  take input from user to check the leap year
      * @return      return weather the given year is a leap year or not
      */
-    public String Leapyear(int year) {
+
+     public String Leapyear(int year) {
     	 if(year%4==0 && year%100!=0) {
     		 return year + " is a leap year" ;
     	 }
@@ -387,18 +388,16 @@ public class Utility {
     	 }
      }
      
-   /******************************************************************************
+    /******************************************************************************
 
-      *  Purpose: to Check the date lies between March 20 to June 20 
- 
-     
-     /**
+     *  Purpose: to Check the date lies between March 20 to June 20
      * @param month take input from user to check the range of month
      * @param date  take input from user to check the range of date
      * @return return the true if the value falls in the given range and return
      *          false if the value not falls in the given range 
      */
-    public String SpringSeason(int month , int date ) {
+
+     public String SpringSeason(int month , int date ) {
     	 if((month==3 && date<=31 && date>=20) || (month==4 && date<=30) ||(month==5 && date<=31) || (month==6 && date<=20) ) {
     		 return "true" ;
     		 
@@ -409,8 +408,8 @@ public class Utility {
      }
      
 
- /********************************************************************************
-    Purpose: to find the root of the quadratic equation 
+   /********************************************************************************
+     * Purpose: to find the root of the quadratic equation 
 
      * @param a taking value of a from user
      * @param b taking value of b from user
@@ -440,9 +439,9 @@ public class Utility {
     	return  distance;
     }
     
-/********************************************************************************************************
+    /********************************************************************************************************
 
-     Purpose: to print sum of two random integers between 1 and 6 
+     * Purpose: to print sum of two random integers between 1 and 6 
     
      * @return  return sum of two random number between 1 to 6
      */
@@ -455,7 +454,7 @@ public class Utility {
     	
     }
     
-/********************************************************************************************************
+    /********************************************************************************************************
 
     Purpose: to find the windchill temperature in farenheit
    
@@ -469,10 +468,9 @@ public class Utility {
     	
     	
     }
- /********************************************************************************************************
 
-    Purpose: to find the windchill temperature in farenheit
-   
+    /********************************************************************************************************
+    * Purpose: to find the windchill temperature in farenheit
     * @return  return wind chill temperature 
     */
     public String tempconversion(double temperature ,int choice ) {
@@ -506,12 +504,12 @@ public class Utility {
     }
     
 
-/********************************************************************************************************
+    /********************************************************************************************************
 
-Purpose: to print percentage of head and tails 
+    * Purpose: to print percentage of head and tails 
 
-* @return   percentage of head and tails 
-*/
+    * @return   percentage of head and tails 
+    */
     
     public String Coin(int flip) {
     	int head = 0 ,tail =0 ;
@@ -593,10 +591,10 @@ Purpose: to print percentage of head and tails
 		
 	}
 	
-	 /********************************************************************************************************
+      /********************************************************************************************************
 
-    Purpose: to print avg win , avgloose , avg bids and number of times own  for a gamling stimulator
-    */
+      * Purpose: to print avg win , avgloose , avg bids and number of times own  for a gamling stimulator
+      */
 	
 	public void gamling(int stake , int goal , int day) {
 		int tempstake = stake;
@@ -631,9 +629,10 @@ Purpose: to print percentage of head and tails
 		
 		
 	}
-	/********************************************************************************************************
 
-	   Purpose: to print the even number in a given range 
+      /********************************************************************************************************
+
+	   * Purpose: to print the even number in a given range 
 	   */
 	   
 
@@ -718,7 +717,7 @@ Purpose: to print percentage of head and tails
 	 
 	 
 	 public void diceroll(int num) {
-        int value;
+          int value;
 		int side =6;
 		 int side1=0;
 	     int side2=0;
@@ -776,12 +775,14 @@ Purpose: to print percentage of head and tails
 
 		 
 	 } 
+
+
 	 /********************************************************************************************************
 
-	   Purpose: to print factorial of a number
+	   * Purpose: to print factorial of a number
 	   
 	   */
-	 public int Factorial(int n) {
+	  public int Factorial(int n) {
 		 int fact=1;
 		 if(n==0) {
 			
@@ -822,7 +823,7 @@ Purpose: to print percentage of head and tails
 	 
 	 /********************************************************************************************************
 
-	   Purpose: to perform cos taylor series
+	   * Purpose: to perform cos taylor series
 	   
 	   */
 	 
@@ -841,7 +842,7 @@ Purpose: to print percentage of head and tails
 		  }
 	 /********************************************************************************************************
 
-	   Purpose: to prime checker
+	 * Purpose: to prime checker
 	   
 	 * @param number check weather the given number is prime or not 
 	 * @return
@@ -860,7 +861,7 @@ Purpose: to print percentage of head and tails
 	    
 	 /********************************************************************************************************
 
-	   Purpose: to compute factor of number using prime factorization
+	   * Purpose: to compute factor of number using prime factorization
 	   
 	   */
 	 
@@ -883,9 +884,7 @@ Purpose: to print percentage of head and tails
 	 
 	 /********************************************************************************************************
 
-	   Purpose: to find the second largest number in an unsorted array
-	   
-	
+	 * Purpose: to find the second largest number in an unsorted array
 	 * @param arr   take an unsorted array from the main class 
 	 * @return
 	 */
@@ -912,9 +911,7 @@ Purpose: to print percentage of head and tails
 	 
 	 /********************************************************************************************************
 
-	   Purpose: to find the second smallest number in an unsorted array
-	   
-
+	 * Purpose: to find the second smallest number in an unsorted array
 	 * @param arr take an unsorted array from the main class
 	 * @return
 	 */
