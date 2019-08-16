@@ -27,6 +27,11 @@ public class Permutation
     // calling  recursive permutation function
     utility.printPermutn(s, "");
     
+    System.out.println();
+    System.out.println();
+    
+    utility.permutationCompare();
+    
     
     
     

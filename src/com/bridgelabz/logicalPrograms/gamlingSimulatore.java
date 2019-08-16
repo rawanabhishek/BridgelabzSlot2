@@ -19,6 +19,7 @@ public class gamlingSimulatore {
 	       System.out.println("Enter  trails   ");
 	       int day =scanner.nextInt();
 	       
+	       // calling gamling function from the utility class
 	       utility.gamling(stake, goal, day);
 	       
 	       scanner.close();

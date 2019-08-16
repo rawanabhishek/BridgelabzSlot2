@@ -9,7 +9,10 @@
  ******************************************************************************/
 package com.bridgelabz.utility;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * @author user
@@ -1139,7 +1142,7 @@ public class Utility {
 		   
 		   */
 		 
-
+         static List<String> listPermutationIterative =new ArrayList<String>();
 	 	// Iterative function to find permutations of a String in Java
 	 	public static void permutations(String s)
 	 	{
@@ -1154,6 +1157,7 @@ public class Utility {
 
 	 		// Print given string, as only its permutations will be printed later
 	 		System.out.print(s);
+	 		listPermutationIterative.add(String.valueOf(chars));
 
 	 		while (i < s.length())
 	 		{
@@ -1167,6 +1171,8 @@ public class Utility {
 
 	 				// Print current permutation
 	 				System.out.print(" " + String.valueOf(chars));
+	 				
+	 				listPermutationIterative.add(String.valueOf(chars));
 
 	 				p[i]++;	// increase index "weight" for i by one
 	 				i = 1;	// reset index i to 1
@@ -1180,9 +1186,8 @@ public class Utility {
 	 				i++;
 	 			}
 	 		}
-	 		
-	 		//String  ArrayList<String> list=new ArrayList<String>();
-	 	}
+	 		 //List<String> arrli = new List<String>;
+	 			 	}
 	 	
 	 	 /********************************************************************************************************
 
@@ -1190,13 +1195,14 @@ public class Utility {
 		   
 		   */
 		 
-	 	
+	 	static List<String> listPermutationRecursion =new ArrayList<String>();
 	    public static void printPermutn(String s, String ans) 
 	    { 
 	  
 	        // If string is empty 
 	        if (s.length() == 0) { 
 	            System.out.print(ans + " "); 
+	            listPermutationRecursion.add(ans);
 	            return; 
 	        } 
 	  
@@ -1222,6 +1228,20 @@ public class Utility {
 		   Purpose: Function to compare two arraylist
 		   
 		   */
+	    
+	    public static void permutationCompare() {
+	    	Collections.sort(listPermutationIterative);
+	    	System.out.println(listPermutationIterative);
+	    	Collections.sort(listPermutationRecursion);
+	    	System.out.println(listPermutationRecursion);
+	    	if(listPermutationIterative.equals(listPermutationRecursion)) {
+	    		System.out.println(" Both Strings are equal ");
+	    		
+	    	}
+	    	else {
+	    		System.out.println("Both Strings are not equal ");
+	    	}
+	    }
 	    
 	    
 
