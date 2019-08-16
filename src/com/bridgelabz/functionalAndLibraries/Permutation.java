@@ -1,3 +1,12 @@
+
+/******************************************************************************
+ 
+ *  Purpose: to perform permutation on a string
+ *  @author  Abhishek Rawat
+ *  @version 1.0
+ *  @since   16-08-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.functionalAndLibraries;
 
 import java.util.Scanner;

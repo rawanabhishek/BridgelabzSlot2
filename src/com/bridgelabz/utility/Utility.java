@@ -582,7 +582,7 @@ public class Utility {
     Purpose: to print the square root of a number 
     */
 
-	public double Square(int c) {
+	public static double Square(int c) {
 		double t ;
 		t = c;
 		double epsilon =1e-15;
@@ -1231,9 +1231,9 @@ public class Utility {
 	    
 	    public static void permutationCompare() {
 	    	Collections.sort(listPermutationIterative);
-	    	System.out.println(listPermutationIterative);
+	    	//System.out.println(listPermutationIterative);
 	    	Collections.sort(listPermutationRecursion);
-	    	System.out.println(listPermutationRecursion);
+	    	//System.out.println(listPermutationRecursion);
 	    	if(listPermutationIterative.equals(listPermutationRecursion)) {
 	    		System.out.println(" Both Strings are equal ");
 	    		
@@ -1243,10 +1243,37 @@ public class Utility {
 	    	}
 	    }
 	    
-	    
+	    /********************************************************************************************************
 
+		   Purpose: Function to return a sin of an angle
+		   
+		   */
+	    
+	    
+	    public static String Sin(double anglesin) {
+        	double radian = Math.toRadians(anglesin);
+        	double sin = Math.sin(radian);
+        	return "Sin of "+anglesin+" is : "+sin;
 	
 	}
+	    
+
+	    /********************************************************************************************************
+
+		   Purpose: Function to return a sin of an angle
+		   
+		   */
+	    
+	    
+	    public static  String cosine(double anglecosine) {
+        	double radian = Math.toRadians(anglecosine);
+        	double cos = Math.cos(radian);
+        	return "Cosine of "+anglecosine+" is : "+cos;
+	
+	}
+	    
+
+}
 
 
 
