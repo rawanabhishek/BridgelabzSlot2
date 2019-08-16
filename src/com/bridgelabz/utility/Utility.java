@@ -1118,8 +1118,113 @@ public class Utility {
 	     return false;
 	    }
 	 
-	  
+	 /********************************************************************************************************
+
+	   Purpose: Utility function to swap two characters in a character array
 	   
+	   */
+	 
+	 
+	 	
+	 	private static void swap(char[] a, int i, int j) {
+	 		//swapping i and j
+	 		char ch = a[i];
+	 		a[i] = a[j];
+	 		a[j] = ch;
+	 	}
+	 	
+	 	 /********************************************************************************************************
+
+		   Purpose: Iterative function to find permutations of a String in Java
+		   
+		   */
+		 
+
+	 	// Iterative function to find permutations of a String in Java
+	 	public static void permutations(String s)
+	 	{
+	 		// convert string to a character array (Since String is immutable)
+	 		char[] chars = s.toCharArray();
+
+	 		// Weight index control array
+	 		int[] p = new int[s.length()];
+
+	 		// i, j represents upper and lower bound index resp. for swapping
+	 		int i = 1, j = 0;
+
+	 		// Print given string, as only its permutations will be printed later
+	 		System.out.print(s);
+
+	 		while (i < s.length())
+	 		{
+	 			if (p[i] < i)
+	 			{
+	 				// if i is odd then j = p[i], otherwise j = 0
+	 				j = (i % 2) * p[i];
+
+	 				// swap(a[j], a[i])
+	 				swap(chars, i, j);
+
+	 				// Print current permutation
+	 				System.out.print(" " + String.valueOf(chars));
+
+	 				p[i]++;	// increase index "weight" for i by one
+	 				i = 1;	// reset index i to 1
+	 			}
+	 			// otherwise p[i] == i
+	 			else {
+	 				// reset p[i] to zero
+	 				p[i] = 0;
+
+	 				// set new index value for i (increase by one)
+	 				i++;
+	 			}
+	 		}
+	 		
+	 		//String  ArrayList<String> list=new ArrayList<String>();
+	 	}
+	 	
+	 	 /********************************************************************************************************
+
+		   Purpose: Function to print all the permutations of str 
+		   
+		   */
+		 
+	 	
+	    public static void printPermutn(String s, String ans) 
+	    { 
+	  
+	        // If string is empty 
+	        if (s.length() == 0) { 
+	            System.out.print(ans + " "); 
+	            return; 
+	        } 
+	  
+	        for (int i = 0; i < s.length(); i++) { 
+	  
+	            // ith character of str 
+	            char ch = s.charAt(i); 
+	  
+	            // Rest of the string after excluding  
+	            // the ith character 
+	            String ros = s.substring(0, i) +  
+	                         s.substring(i + 1); 
+	  
+	            // Recurvise call 
+	            printPermutn(ros, ans + ch); 
+	        } 
+	    } 
+	    
+	    
+
+	 	 /********************************************************************************************************
+
+		   Purpose: Function to compare two arraylist
+		   
+		   */
+	    
+	    
+
 	
 	}
 
