@@ -1271,6 +1271,24 @@ public class Utility {
         	return "Cosine of "+anglecosine+" is : "+cos;
 	
 	}
+	    /********************************************************************************************************
+
+		   Purpose: Function to return a sin of an angle
+		   
+		   */
+	    
+	    
+	    public static double Square(double squareroot ,double epsilon ) {
+			double t ;
+			t = squareroot;
+			
+			while(Math.abs(t - squareroot/t )> epsilon*t) {
+			  t=(squareroot/t +t)/2.0;
+				
+			}
+			return  t;
+			
+		}
 	    
 
 }

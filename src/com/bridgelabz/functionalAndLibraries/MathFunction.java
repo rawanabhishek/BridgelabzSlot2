@@ -51,8 +51,8 @@ public class MathFunction {
 	    	   System.out.println("Enter a number to check its square root ");
 		        double squareroot = scanner.nextDouble();
 		        if(squareroot>0) {
-		 	       double result=utility.Square(squareroot, epsilon);
-		 	       System.out.println("the square root of : "+squareroot+ " is "+result);
+		 	     System.out.println( utility.Square(squareroot, epsilon));;
+		 	   
 		 	       
 		 		}
 		 		else {
