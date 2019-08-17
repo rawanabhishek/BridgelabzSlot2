@@ -51,16 +51,29 @@ public class MathFunction {
 	    	   System.out.println("Enter a number to check its square root ");
 		        double squareroot = scanner.nextDouble();
 		        if(squareroot>0) {
-		 	     System.out.println( utility.Square(squareroot, epsilon));;
-		 	   
-		 	       
-		 		}
-		 		else {
+		 	     System.out.println("the square root is "+utility.Square(squareroot, epsilon));
+		        }
+		        else {
 		 			System.out.println("Enter a positive integer ");
 		 		}
+		 	     
+		 	 case 6:
+		 		System.out.println("Enter a number to check it is Prime or Not ");
+		        int prime = scanner.nextInt();
+		        boolean result =utility.primechecker(prime);
+		        if(result) {
+		        	System.out.println("The given number is Prime Number ");
+		        }
+		        else {
+		        	System.out.println("The given number is not a Prime Number");
+		        }
+		 	       
+		 		}                     
+		 		
 	       
 	       
 	       }
-	}
 
 }
+
+
