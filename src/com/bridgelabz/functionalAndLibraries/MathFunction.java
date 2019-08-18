@@ -67,7 +67,34 @@ public class MathFunction {
 		        else {
 		        	System.out.println("The given number is not a Prime Number");
 		        }
-		 	       
+		 	      
+                         case 7:   
+		 		System.out.println("Enter a number to print its factorial");
+		        int mathfactorial = scanner.nextInt();
+		 	     System.out.println("Factorial of "+mathfactorial+"is "+utility.Factorial(mathfactorial));  
+		 	     
+		 	     
+		 	case 8:
+	    	         System.out.println("Enter Amount");
+		        int amountfuture = scanner.nextInt();
+		        System.out.println("Enter Interst rate");
+		        int interestfuture= scanner.nextInt();
+		        System.out.println("Enter time in years");
+		        int periodfuture = scanner.nextInt();
+		        System.out.println("The future amount is : "+utility.futurevalue(amountfuture, interestfuture, periodfuture));
+		        
+		        
+		 	case 9:
+	    	        System.out.println("Enter Amount");
+		        int amountpresent = scanner.nextInt();
+		        System.out.println("Enter Interst rate");
+		        int interestpresent= scanner.nextInt();
+		        System.out.println("Enter time in years");
+		        int periodpresent= scanner.nextInt();
+		        System.out.println("The present amount is : "+utility.presentvalue(amountpresent, interestpresent, periodpresent));
+		 	                   
+		 		
+	        
 		 		}                     
 		 		
 	       

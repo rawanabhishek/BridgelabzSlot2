@@ -1289,6 +1289,28 @@ public class Utility {
 			return  t;
 			
 		}
+             /********************************************************************************************************
+
+		   Purpose: Function to return future value 
+		   
+		   */
+	    public static double futurevalue(int amountfuture , int interestfuture , int periodfuture) {
+	    	double futureAmount = amountfuture *Math.pow(interestfuture, periodfuture);
+	    	return futureAmount;
+	    	
+	    }
+
+	    
+	    /********************************************************************************************************
+
+		   Purpose: Function to return present value 
+		   
+		   */
+	    public static double presentvalue(int amountpresent , int interestpresent , int periodpresent) {
+	    	double presentAmount = amountpresent /Math.pow(interestpresent, periodpresent);
+	    	return presentAmount;
+	    	
+	    }
 	    
 
 }
