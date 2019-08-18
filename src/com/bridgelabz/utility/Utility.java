@@ -1311,6 +1311,115 @@ public class Utility {
 	    	return presentAmount;
 	    	
 	    }
+             
+           /********************************************************************************************************
+
+		   Purpose: Function to return minvalue from an array
+		   
+		   */
+
+       public static int MinValue(int [] numberArray) {
+    	   int temp=Integer.MAX_VALUE;
+    	   for(int i = 0 ; i <numberArray.length;i++) {
+    		  temp=temp<numberArray[i]?temp:numberArray[i];
+    		
+    	   }
+    	   return temp;
+       }
+       
+       /********************************************************************************************************
+
+	   Purpose: Function to return minvalue from an array
+	   
+	   */
+
+      public static int MaxValue(int [] numberArray) {
+	   int temp=Integer.MIN_VALUE;
+	   for(int i = 0 ; i <numberArray.length;i++) {
+		  temp=temp>numberArray[i]?temp:numberArray[i];
+		
+	   }
+	   return temp;
+      }
+      
+      /********************************************************************************************************
+
+	   Purpose: Function to return minvalue from a string array
+	   
+	   */
+
+      public static String minValue(String[] strArr) {
+  		String temp;
+  		for (int i = 0; i < strArr.length; i++) {
+  			for (int j = i + 1; j < strArr.length; j++) {
+  				if (strArr[j].compareTo(strArr[i]) < 0) {
+  					temp = strArr[j];
+  					strArr[j] = strArr[i];
+  					strArr[i] = temp;
+  				}
+  			}
+  		}
+  		return strArr[0];
+  	}
+      
+
+      /********************************************************************************************************
+
+	   Purpose: Function to return maxvalue from a string array
+	   
+	   */
+
+      public static String maxValue(String[] strArr) {
+  		String temp;
+  		int strArrLength = strArr.length;
+  		for (int i = 0; i < strArr.length; i++) {
+  			for (int j = i + 1; j < strArr.length; j++) {
+  				if (strArr[j].compareTo(strArr[i]) > 0) {
+  					temp = strArr[j];
+  					strArr[j] = strArr[i];
+  					strArr[i] = temp;
+  				}
+  			}
+  		}
+
+		return strArr[0];
+  	}
+      /********************************************************************************************************
+
+	   Purpose: Function to check collinear using slope
+	   
+	   */
+
+      public static boolean checkCollinearUsingSlope(int x1, int y1, int x2, int y2, int x3, int y3) {
+  		double slopeAB, slopeBC, slopeAC;
+  		slopeAB = (y2 - y1) / (x2 - x1);
+  		slopeBC = (y3 - y2) / (x3 - x2);
+  		slopeAC = (y3 - y1) / (x3 - x1);
+  		if (slopeAB == slopeBC) {
+  			if (slopeAB == slopeAC) {
+  				return true;
+  			}
+  		}
+  		return false;
+  	}
+      
+      
+      /********************************************************************************************************
+
+	   Purpose: Function to check collinear using area 
+	   
+	   */
+      
+      
+      public static boolean checkCollinearUsingArea(int x1, int y1, int x2, int y2, int x3, int y3) {
+  		int calculateTriangleCollinear;
+  		calculateTriangleCollinear = x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2);
+
+  		if (calculateTriangleCollinear == 0)
+  			return true;
+
+  		return false;
+  	}
 	    
 
 }
