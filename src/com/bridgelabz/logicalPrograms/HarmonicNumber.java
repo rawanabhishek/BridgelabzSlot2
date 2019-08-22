@@ -10,7 +10,7 @@ public class HarmonicNumber {
 	       Utility utility = new Utility();
 	       
 	       System.out.println("Enter a value for command line argument : ");
-	       System.out.println(args[0]);
+	       //System.out.println(args[0]);
 	       int n =Integer.parseInt(args[0]);
 	       
 	      utility.Harmonic(n);
