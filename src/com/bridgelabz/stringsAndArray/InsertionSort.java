@@ -1,9 +1,20 @@
+/******************************************************************************
+ 
+ *  Purpose:  to perform insertion sort on the given string
+ *
+ *  @author  Abhishek Rawat
+ *  @version 1.0
+ *  @since   20-08-2019
+ *
+ ******************************************************************************/
+
+
 package com.bridgelabz.stringsAndArray;
 
 public class InsertionSort {
 
 	public static void main(String[] args) {
-		 String arr[]= {"abhii", "babu", "akansh" ,"baudi","vinay"};
+		 String arr[]= {"five", "one", "six" ,"two","four", "three"};
 		    String temp;
 		    String sort="";
 		    for(int i =0 ; i<arr.length ; i++) {

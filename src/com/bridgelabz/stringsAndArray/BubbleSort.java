@@ -1,3 +1,12 @@
+/******************************************************************************
+ 
+ *  Purpose:  to perform bubble sort on the given string
+ *
+ *  @author  Abhishek Rawat
+ *  @version 1.0
+ *  @since   20-08-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.stringsAndArray;
 
 public class BubbleSort {

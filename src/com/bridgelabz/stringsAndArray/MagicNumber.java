@@ -1,3 +1,12 @@
+/******************************************************************************
+ 
+ *  Purpose:  to find the user number using binary search
+ *
+ *  @author  Abhishek Rawat
+ *  @version 1.0
+ *  @since   20-08-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.stringsAndArray;
 
 import java.util.Scanner;
@@ -19,7 +28,7 @@ public class MagicNumber {
            System.out.println("Think of a number in your mind between 0 to "+(range-1));
            
            
-           while(li<=hi && hi-li>0) {
+           while(li<hi) {
         	 System.out.println("if your number is between "+li+" to "+mi+" Press 1 ");
         	 System.out.println("if your number is between "+(mi+1)+" to "+hi+" Press 2");
             

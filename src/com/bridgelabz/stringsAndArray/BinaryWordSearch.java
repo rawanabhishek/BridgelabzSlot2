@@ -1,3 +1,12 @@
+/******************************************************************************
+ 
+ *  Purpose:  to perform binary search on the given string
+ *
+ *  @author  Abhishek Rawat
+ *  @version 1.0
+ *  @since   20-08-2019
+ *
+ ******************************************************************************/
 package com.bridgelabz.stringsAndArray;
 
 import java.util.Arrays;

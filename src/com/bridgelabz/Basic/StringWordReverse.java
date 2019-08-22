@@ -2,7 +2,7 @@ package com.bridgelabz.Basic;
 
 public class StringWordReverse {
 	public static void main(String[] args) {
-		String str="Hi how are you";
+		String str="kabhi kabhi apun ko lagta hai apun he bahgwan hai";
 		String reverseString="";
 		String [] words=str.split(" ");
 		for(int i=0;i<words.length;i++) {
