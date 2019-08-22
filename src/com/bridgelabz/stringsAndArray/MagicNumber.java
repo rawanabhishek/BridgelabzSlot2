@@ -51,7 +51,7 @@ public class MagicNumber {
            System.out.println("Your number is :"+mi);
            	
            
-           	 scanner.close();
+           	 
            }
            
            
