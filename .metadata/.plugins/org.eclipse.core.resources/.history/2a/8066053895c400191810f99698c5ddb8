@@ -15,7 +15,18 @@ public class InsertionSort {
 		    		j=j-1;
 		    	}
 		    	arr[j+1]=key;
-		    	}
+		    		
+//		    		if(arr[i].compareTo(arr[j])>0) {
+//		    			
+//		    			temp=arr[i];
+//		    			arr[i]=arr[j];
+//		    			arr[j]=temp;
+//		    			
+//		    		}
+		    		
+		    	
+		    	
+		    }
 		    
 		    System.out.println("The sorted order is :");
 		    for(int j = 0 ;j<arr.length;j++) {

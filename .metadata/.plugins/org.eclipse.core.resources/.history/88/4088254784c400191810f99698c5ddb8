@@ -19,7 +19,7 @@ public class MagicNumber {
            System.out.println("Think of a number in your mind between 0 to "+(range-1));
            
            
-           while(li<hi) {
+           while(li<=hi && hi-li>0) {
         	 System.out.println("if your number is between "+li+" to "+mi+" Press 1 ");
         	 System.out.println("if your number is between "+(mi+1)+" to "+hi+" Press 2");
             
@@ -42,7 +42,7 @@ public class MagicNumber {
            System.out.println("Your number is :"+mi);
            	
            
-           	 scanner.close();
+           	 
            }
            
            
