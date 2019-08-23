@@ -28,9 +28,9 @@ public class WindChill {
         	System.out.println();
 			System.out.println("Enter Temperature less than 51 and wind speed between 3 to 120 ");
 			 System.out.println();
-			System.out.println("Enter the temperature  : ");
+			System.out.println("ReEnter the temperature  : ");
 			 temperature=scanner.nextDouble();
-			 System.out.println("Enter the wind speed  : ");
+			 System.out.println("ReEnter the temperature  : ");
 			 windspeed =scanner.nextDouble();
 		}
 		

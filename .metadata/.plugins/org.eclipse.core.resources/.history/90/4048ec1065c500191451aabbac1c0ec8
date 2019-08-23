@@ -1,5 +1,6 @@
 package com.bridgelabz.Basic;
 
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Array2D {
@@ -15,7 +16,7 @@ public class Array2D {
 		
 		ReadInt(row, col);
 		
-		scanner.close();
+		
 		
 	}
 	
@@ -26,8 +27,7 @@ public class Array2D {
 				System.out.println( a[i][j]);
 			}
 		}
-	
-	
+		
 	}
 
 }
