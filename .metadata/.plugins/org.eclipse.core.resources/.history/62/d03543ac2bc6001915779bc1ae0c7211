@@ -5,13 +5,13 @@ import java.util.Arrays;
 public class Birthday {
 
 	public static void main(String[] args) {
-		int n=10;
+		int n=50;
 		int month[]=new int [n];
     	//int year[]=new int [n];
     	//int date[]=new int [n];
     	
     	String individual[]= new String[n];
-         for(int i=0 ;i<n;i++) {
+         for(int i=0 ;i<50;i++) {
         	int  Monthvalue=(int)(Math.random()*12)+1;
         	int YearValue=(int)(Math.random()*2)+91;
         	int DateValue=(int)(Math.random()*31);
@@ -39,15 +39,12 @@ public class Birthday {
          
          }
 	   static void Repeated(String individual[] , int month[] ,int li ,int hi) {
-		   int count=0;
+		   
 		   int mi=(li+hi)/2;
 		   while(li<hi) {
-			   //count++;
-			   
 	        	 if(month[mi]!=mi+1) {
 	        	   	  if(mi>0 && month[mi]==month[mi+1]) {
 	        	   		  System.out.println(individual[mi]);
-	        	   		 break;
 	        	   	  }
 	        	   	  Repeated(individual,month,li,mi-1);
 	        	     }

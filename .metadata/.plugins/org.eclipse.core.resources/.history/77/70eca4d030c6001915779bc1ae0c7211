@@ -47,7 +47,7 @@ public class Birthday {
 	        	 if(month[mi]!=mi+1) {
 	        	   	  if(mi>0 && month[mi]==month[mi+1]) {
 	        	   		  System.out.println(individual[mi]);
-	        	   		 break;
+	        	   		 // Repeated(individual,month,li,hi);
 	        	   	  }
 	        	   	  Repeated(individual,month,li,mi-1);
 	        	     }
