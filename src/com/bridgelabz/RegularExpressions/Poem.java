@@ -1,4 +1,4 @@
-package RegularExpressions;
+package com.bridgelabz.RegularExpressions;
 
 import java.util.Scanner;
 

@@ -7,8 +7,9 @@ public class Birthday {
 	public static void main(String[] args) {
 		int n=10;
 		int month[]=new int [n];
-    	//int year[]=new int [n];
-    	//int date[]=new int [n];
+		int year[]=new int[n];
+		int date[]=new int[n];
+    
     	
     	String individual[]= new String[n];
          for(int i=0 ;i<n;i++) {
@@ -17,45 +18,85 @@ public class Birthday {
         	int DateValue=(int)(Math.random()*31);
         	
         	 month[i]=Monthvalue;
-        	// year[i]=YearValue;
-        	// date[i]=DateValue;
+        	 year[i]=YearValue;
+        	 date[i]=DateValue;
+        	 
+        
         	 
         	 individual[i]=Monthvalue+"/ "+ YearValue+" / "+DateValue;
-        	 
+        	
          }
          Arrays.sort(individual);
-         Arrays.sort(month);
-        // for(int i=0 ; i<n ;i++) {
-        //	 System.out.println(individual[i]);
-        // }
-       //  int i =0;
+         int temp=0;
+         for(int i=1;i<n;i++) {
+        	 int key=i;
+        	 int li=0;
+        	 int hi=n-1;
+        	 int mi=(li+hi)/2;
+        	 while(li<hi) {
+        	      	if(individual[mi].equals(individual[key])) {
+        	      		System.out.println("the month  "+key+"has been repeated");
+        	      		break;
+        	       	}
+        	      	else if(individual[key].compareTo(individual[mi])>0) {
+        	     		li=mi+1;
+        	      	}
+        	     		
+        	     	  else {
+        	       		hi=mi-1;
+        	       	}
+        	      	
+        	      	mi=(li+hi)/2;
+        	      	        }
+        	 
+        	 
+         }
+         
+//         for(int i=0;i<n;i++) {
+//        	 System.out.println( individual[i]);
+//         }
+//         
+//         for(int i=0;i<n;i++) {
+//        	 for(int j=i+1;j<n;j++) {
+//        		 if(month[i]==month[j]) {
+//        			 System.out.println(month[i]+"/"+date[i]+"/"+year[i]+" and " +month[j]+"/"+date[j]+"/"+year[j]);
+//        			// break;
+//        		 }
+//        	 }
+//         }
+         
+//         
+//         for(int i=0;i<n;i++) {
+//        	 System.out.println( individual[i]);
+//         }
+//         
+//        // Repeated(individual ,month ,0 , n-1);
       
-        	// while((month[i]== month[i+1] )&& (i<n)) {
-        	//	 System.out.println(month[i]+" "+year[i]+" "+date[i]);
-        	//	 i++;
-        	// }
-     Repeated(individual ,month ,0 , n-1);
+    
+     
         
          
          }
-	   static void Repeated(String individual[] , int month[] ,int li ,int hi) {
-		   int count=0;
-		   int mi=(li+hi)/2;
-		   while(li<hi) {
-			   //count++;
-			   
-	        	 if(month[mi]!=mi+1) {
-	        	   	  if(mi>0 && month[mi]==month[mi+1]) {
-	        	   		  System.out.println(individual[mi]);
-	        	   		 break;
-	        	   	  }
-	        	   	  Repeated(individual,month,li,mi-1);
-	        	     }
-	        	     Repeated(individual,month,mi+1,hi);
-	        	     
-	        		 }
-	         
-	   }
+//	   static void Repeated(String individual[] , int month[] ,int li ,int hi) {
+//		
+//		   int mi=(li+hi)/2;
+//		   int ser=mi;
+//		   while(li<=hi) {
+//			 
+//			   if(month[mi+1]=ser) {
+////	        	 if(month[mi]!=mi+1) {
+////	        	   	  if(mi>0 && month[mi]==month[mi+1]) {
+////	        	   		  System.out.println(individual[mi]);
+////	        	   		 
+////	        	   	  }
+////	        	   	  Repeated(individual,month,li,mi-1);
+////	        	     }
+////	        	     Repeated(individual,month,mi+1,hi);
+////	        	     break;
+////	        		 }
+//		 
+//	         
+//	   }
 	}
 
 
