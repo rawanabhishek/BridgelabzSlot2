@@ -62,7 +62,7 @@ public class RegularExpressionsUtility {
 	 * @return if valid true else false
 	 */
 	public boolean isValidEmail(String email) {
-		// TODO Auto-generated method stub ^(.+)@(.+)$
+
 		Pattern pattern = Pattern.compile("^(.+)@(.+)$");
 		Matcher matcher = pattern.matcher(email);
 		return matcher.matches();
@@ -75,21 +75,21 @@ public class RegularExpressionsUtility {
 	 * @return if valid true else false
 	 */
 	public boolean isValidMobile(String phone) {
-		// TODO Auto-generated method stub
+	
 		Pattern pattern = Pattern.compile("^\\+(?:[0-9] ?){6,14}[0-9]$");
 		Matcher matcher = pattern.matcher(phone);
 		return matcher.matches();
 	}
 
 	public boolean isValidUsername(String userid) {
-		// TODO Auto-generated method stub a-zA-Z0-9
+
 		Pattern pattern = Pattern.compile("^[a-zA-Z0-9]+$");
 		Matcher matcher = pattern.matcher(userid);
 		return matcher.matches();
 	}
 
 	public boolean isValidPassword(String password) {
-		// TODO Auto-generated method stub
+
 		/*
 		 * (?=.*[a-z]) : This matches the presence of at least one lowercase letter.
 		 * (?=.*d) : This matches the presence of at least one digit i.e. 0-9.

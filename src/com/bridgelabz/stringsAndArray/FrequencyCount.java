@@ -25,7 +25,7 @@ public class FrequencyCount {
 		    System.out.print(strArr[i]+" ");  
 		}  
 		System.out.println();
-      utility.frequencyCount(strArr);
+      SortUtility.frequencyCount(strArr);
 	}
 
 }

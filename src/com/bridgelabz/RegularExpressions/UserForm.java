@@ -20,7 +20,7 @@ public class UserForm {
 				email = scanner.next();
 				if (utility.isValidEmail(email)) {
 					System.out.println("Enter phone with coutry code");
-					phone = scanner.nextLine();
+					phone = scanner.next();
 					if (utility.isValidMobile(phone)) {
 						System.out.println("Enter company");
 						company = scanner.next();
