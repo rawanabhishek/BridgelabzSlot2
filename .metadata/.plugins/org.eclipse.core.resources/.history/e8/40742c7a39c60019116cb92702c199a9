@@ -1,0 +1,10 @@
+package com.bridgelabz.Basic;
+
+public class BirthdayArray {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

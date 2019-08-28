@@ -16,7 +16,7 @@ import com.bridgelabz.utility.Utility;
 public class Repeated {
 
 	public static void main(String[] args) {
-		//Utility utility = new Utility();
+		Utility utility = new Utility();
 		
       int array[] =  {1,2,3,4,5,5,6};
     //  Arrays.sort(array);
@@ -30,10 +30,11 @@ public class Repeated {
 	}
 	
 	 static int findRepeated(int array[], int low , int high) {
-    
-		 if(low>high) {
+     //int low =0;
+    // int high=array.length-1;
+		 if(low>high)
 			 return -1;
-		 }
+		 
      int mid=(low+high)/2;
      
      if(array[mid]!=mid+1) {
