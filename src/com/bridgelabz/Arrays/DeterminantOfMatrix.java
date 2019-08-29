@@ -31,6 +31,14 @@ public class DeterminantOfMatrix {
    int  determinant3=N[0][0]*N[1][1]-N[1][0]*N[0][1];
     
      int matrix =M[0][0]*determinant1-M[0][1]*determinant2+M[0][2]*determinant3;
+     for(int i=0 ;i<3;i++) {
+    	 for(int j=0;j<3;j++) {
+    		 System.out.print(M[i][j]+" ");
+    	 }
+    	 System.out.println();
+     }
+     System.out.println();
+     System.out.println("The determinant of the above matrix is : ");
      System.out.println(matrix);
 	}
 

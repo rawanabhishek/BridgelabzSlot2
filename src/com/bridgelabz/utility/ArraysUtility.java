@@ -1,6 +1,7 @@
 package com.bridgelabz.utility;
 
 import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class ArraysUtility {
@@ -279,5 +280,28 @@ public class ArraysUtility {
 		int value = (int)Math.pow(2, num+1);
 		return value;
 		
+	}
+	/*****************************************************************************************/
+	
+	public static int randomNumber(int range) {
+		Random random = new Random();
+		return (int) random.nextInt(range) + 1;// 1 to 6
+	}
+	/*****************************************************************************************/
+	public static String[] shuffleCardsDeck(String[] arr) {
+		Random random = new Random();
+		int f1, f2;
+		String temp;
+		for (int i = 0; i < 52; i++) {
+			f1 = random.nextInt(51);
+			f2 = random.nextInt(51);
+			if (f1 != f2) {
+				temp = arr[f1];
+				arr[f1] = arr[f2];
+				arr[f2] = temp;
+			}
+		}
+		return arr;
+
 	}
 }
