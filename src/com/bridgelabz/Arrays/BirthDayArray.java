@@ -24,48 +24,81 @@ public class BirthDayArray {
 			individual[i]= MonthValue+" / "+DateValue+" / "+YearValue;
 
 		}
+		int count[]=new int [12];
+		 
 		//Arrays.sort(individual);
 		//Arrays.sort(month);
 		for (int i = 0; i < n; i++) {
 			System.out.println(individual[i]);
 		}
 		System.out.println();
-	
+	   
 		for (int i = 0; i < n; i++) {
-			System.out.println(month[i]);
+			//System.out.println(month[i]);
+		if(month[i]==1) {
+			count[0]++;
+			
+			}
+		else if(month[i]==2) {
+			count[1]++;
+			
+			}
+		else if(month[i]==3) {
+			count[2]++;
+			
+			}
+		else if(month[i]==4) {
+			count[3]++;
+			
+			}
+		else if(month[i]==5) {
+			count[4]++;
+			
+			}
+		else if(month[i]==6) {
+			count[5]++;
+			
+			}
+		else if(month[i]==7) {
+			count[6]++;
+			
+			}
+		else if(month[i]==8) {
+			count[7]++;
+			
+			}
+		else if(month[i]==9) {
+			count[8]++;
+			
+			}
+		else if(month[i]==10) {
+			count[9]++;
+			
+			}
+		else if(month[i]==11) {
+			count[10]++;
+			
+			}else if(month[i]==12) {
+				count[11]++;
+				
+				}
+			else{
+			System.out.println("no month has been repeated ");
+		}
 		}
 		
-		int count1=0;
-		for(int i=0 ;i<n-1;i++) {
-			int k = 0;
-			int count=0;
-			for(int j=i+1;j<n;j++) {
-				if(month[i]==month[j] ) {
-					
-					if(count==0  ) {
-						// count1++;
-						count++;
-						System.out.print(individual[i]+ " and "+individual[j]);	
-					}
-//					else if(count==0 ) {
-//						// count1++;
-//						count++;
-//						System.out.print(individual[i]+ " and "+individual[j]);	
-//					}
-					else {
-						System.out.print(" and "+individual[j]);
-						break;
-					}
-					
-				}
+		
+		for(int i=0;i<count.length;i++) {
+			
+				if(count[i]>1 ) {
+					System.out.println("Month "+(i+1)+ " has occured "+count[i]+" times");
 				
-				
-			}
-			if(count>0) {
-				System.out.println(" have same month");
 			}
 			
 		}
+		
+		
+	
 
 	}
 }
