@@ -1,0 +1,85 @@
+package com.bridgelabz.FileIO;
+
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class MatrixIO {
+
+	public static void main(String[] args) throws IOException  {
+		FileReader file=new FileReader("C:\\Users\\Rawan\\git\\BridgelabzSlot2\\src\\com\\bridgelabz\\TextFiles\\matrixinput");
+		BufferedReader bufferedreader=new BufferedReader(file);
+		String str="";
+		try {
+   			
+			str=str+bufferedreader.readLine();
+		
+		  
+	}
+	catch (IOException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+		
+		String[] strArray=str.split(",");
+		int arr[]=new int[strArray.length];
+		int k=0;
+		for(int i=0;i<3;i++) {
+			try {
+				arr[i]=Integer.parseInt(strArray[i]);
+			}catch(NumberFormatException nfe){
+				System.err.println(nfe);
+				
+			}
+		}
+		
+		int[][] M = new int[3][3];
+		for(int i=0;i<3;i++) {
+			for(int j=0;j<3;j++) {
+				M[i][j]=arr[k];
+				k++;
+			}
+		}
+		
+		
+		 int [][] N=new int[2][2];
+	      
+	      N[0][0]=M[1][1];
+	      N[0][1]=M[1][2];
+	      N[1][0]=M[2][1];
+	      N[1][1]=M[2][2];
+	      
+	     int  determinant1=N[0][0]*N[1][1]-N[1][0]*N[0][1];
+	     
+	     N[0][0]=M[1][0];
+	     N[0][1]=M[1][2];
+	     N[1][0]=M[2][0];
+	     N[1][1]=M[2][2];
+	     
+	    int  determinant2=N[0][0]*N[1][1]-N[1][0]*N[0][1];
+	     
+	   
+	    
+	    N[0][0]=M[1][0];
+	    N[0][1]=M[1][1];
+	    N[1][0]=M[2][0];
+	    N[1][1]=M[2][1];
+	    
+	   int  determinant3=N[0][0]*N[1][1]-N[1][0]*N[0][1];
+	    
+	     int matrix =M[0][0]*determinant1-M[0][1]*determinant2+M[0][2]*determinant3;
+	     for(int i=0 ;i<3;i++) {
+	    	 for(int j=0;j<3;j++) {
+	    		 System.out.print(M[i][j]+" ");
+	    	 }
+	    	 System.out.println();
+	     }
+	     System.out.println();
+	     System.out.println("The determinant of the above matrix is : ");
+	     System.out.println(matrix);
+		}
+       
+	}
+
+
