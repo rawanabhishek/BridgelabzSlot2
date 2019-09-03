@@ -19,7 +19,7 @@ public class TicTacToe {
 		// start we assign board as - everywhere in array
 		// initializing board
 
-		TicTacUtility.initializingBoard(board);
+	//	TicTacUtility.initializingBoard(board);
 
 		// taking input from user
 		// to decide who will play first
@@ -38,7 +38,7 @@ public class TicTacToe {
 			while (!end) {
 				Thread.sleep(4000);
 
-				TicTacUtility.printBoard(board);
+			//	TicTacUtility.printBoard(board);
 
 				// getting humans move
 
