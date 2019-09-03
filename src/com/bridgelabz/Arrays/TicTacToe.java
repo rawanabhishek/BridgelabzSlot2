@@ -6,11 +6,11 @@ import java.util.Scanner;
 import com.bridgelabz.utility.TicTacUtility;
 
 public class TicTacToe {
-	public static char board[][] = new char[3][3];
+	public static String board[][] = new String[3][3];
 	public static int counter = 1;
 	public static String firstMove;
 	public static boolean end = false;
-	public static char win;
+	public static String win;
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -19,7 +19,7 @@ public class TicTacToe {
 		// start we assign board as - everywhere in array
 		// initializing board
 
-	//	TicTacUtility.initializingBoard(board);
+	TicTacUtility.initializingBoard(board);
 
 		// taking input from user
 		// to decide who will play first
@@ -44,26 +44,26 @@ public class TicTacToe {
 
 				System.out.println("Your next move");
 				String move = scanner.next();
-				if (move.equals("00") && board[0][0] == '-') {
-					board[0][0] = 'O';
-				} else if (move.equals("01") && board[0][1] == '-') {
-					board[0][1] = 'O';
-				} else if (move.equals("02") && board[0][2] == '-') {
-					board[0][2] = 'O';
-				} else if (move.equals("10") && board[1][0] == '-') {
-					board[1][0] = 'O';
-				} else if (move.equals("11") && board[1][1] == '-') {
-					board[1][1] = 'O';
-				} else if (move.equals("12") && board[1][2] == '-') {
-					board[1][2] = 'O';
-				} else if (move.equals("13") && board[1][3] == '-') {
-					board[1][3] = 'O';
-				} else if (move.equals("20") && board[2][0] == '-') {
-					board[2][0] = 'O';
-				} else if (move.equals("21") && board[2][1] == '-') {
-					board[2][1] = 'O';
-				} else if (move.equals("22") && board[2][2] == '-') {
-					board[2][2] = 'O';
+				if (move.equals("00") && board[0][0] == " - ") {
+					board[0][0] = " O ";
+				} else if (move.equals("01") && board[0][1] == " - ") {
+					board[0][1] = " O ";
+				} else if (move.equals("02") && board[0][2] == " - ") {
+					board[0][2] = " O ";
+				} else if (move.equals("10") && board[1][0] == " - ") {
+					board[1][0] = " O ";
+				} else if (move.equals("11") && board[1][1] == " - ") {
+					board[1][1] = " O ";
+				} else if (move.equals("12") && board[1][2] == " - ") {
+					board[1][2] = " O ";
+				} else if (move.equals("13") && board[1][3] == " - ") {
+					board[1][3] = " O ";
+				} else if (move.equals("20") && board[2][0] == " - ") {
+					board[2][0] = " O ";
+				} else if (move.equals("21") && board[2][1] == " - ") {
+					board[2][1] = " O ";
+				} else if (move.equals("22") && board[2][2] == " - ") {
+					board[2][2] = " O ";
 				} else {
 					System.out.println("Invalid move");
 				}
@@ -71,11 +71,11 @@ public class TicTacToe {
 				// getting computers input
 				move();
 			}
-			if (win == 'o') {
+			if (win == " O ") {
 				System.out.println("Human Won");
-			} else if (win == 'X') {
+			} else if (win == " X ") {
 				System.out.println("Computer Won");
-			} else if (win == 'd' || win == 'D') {
+			} else if (win == "d" || win == "D") {
 				System.out.println("Game is a draw");
 			}
 
@@ -83,24 +83,24 @@ public class TicTacToe {
 			System.out.println("Human goes first");
 			System.out.println("enter your move");
 			String move = scanner.next();
-			if (move.equals("00") && board[0][0] == '-') {
-				board[0][0] = 'O';
-			} else if (move.equals("01") && board[0][1] == '-') {
-				board[0][1] = 'O';
-			} else if (move.equals("02") && board[0][2] == '-') {
-				board[0][2] = 'O';
-			} else if (move.equals("10") && board[1][0] == '-') {
-				board[1][0] = 'O';
-			} else if (move.equals("11") && board[1][1] == '-') {
-				board[1][1] = 'O';
-			} else if (move.equals("12") && board[1][2] == '-') {
-				board[1][2] = 'O';
-			} else if (move.equals("20") && board[2][0] == '-') {
-				board[2][0] = 'O';
-			} else if (move.equals("21") && board[2][1] == '-') {
-				board[2][1] = 'O';
-			} else if (move.equals("22") && board[2][2] == '-') {
-				board[2][2] = 'O';
+			if (move.equals("00") && board[0][0] == " - ") {
+				board[0][0] = " O ";
+			} else if (move.equals("01") && board[0][1] == " - ") {
+				board[0][1] = " O ";
+			} else if (move.equals("02") && board[0][2] == " - ") {
+				board[0][2] = " O ";
+			} else if (move.equals("10") && board[1][0] == " - ") {
+				board[1][0] = " O ";
+			} else if (move.equals("11") && board[1][1] == " - ") {
+				board[1][1] = " O ";
+			} else if (move.equals("12") && board[1][2] == " - ") {
+				board[1][2] = " O ";
+			} else if (move.equals("20") && board[2][0] == " - ") {
+				board[2][0] = " O ";
+			} else if (move.equals("21") && board[2][1] == " - ") {
+				board[2][1] = " O ";
+			} else if (move.equals("22") && board[2][2] == " - ") {
+				board[2][2] = " O ";
 			} else {
 				System.out.println("That is not a valid move");
 			}
@@ -118,24 +118,24 @@ public class TicTacToe {
 
 				System.out.println("enter your move");
 				move = scanner.next();
-				if (move.equals("00") && board[0][0] == '-') {
-					board[0][0] = 'O';
-				} else if (move.equals("01") && board[0][1] == '-') {
-					board[0][1] = 'O';
-				} else if (move.equals("02") && board[0][2] == '-') {
-					board[0][2] = 'O';
-				} else if (move.equals("10") && board[1][0] == '-') {
-					board[1][0] = 'O';
-				} else if (move.equals("11") && board[1][1] == '-') {
-					board[1][1] = 'O';
-				} else if (move.equals("12") && board[1][2] == '-') {
-					board[1][2] = 'O';
-				} else if (move.equals("20") && board[2][0] == '-') {
-					board[2][0] = 'O';
-				} else if (move.equals("21") && board[2][1] == '-') {
-					board[2][1] = 'O';
-				} else if (move.equals("22") && board[2][2] == '-') {
-					board[2][2] = 'O';
+				if (move.equals("00") && board[0][0] == " - ") {
+					board[0][0] = " O ";
+				} else if (move.equals("01") && board[0][1] == " - ") {
+					board[0][1] = " O ";
+				} else if (move.equals("02") && board[0][2] == " - ") {
+					board[0][2] = " O ";
+				} else if (move.equals("10") && board[1][0] == " - ") {
+					board[1][0] = " O ";
+				} else if (move.equals("11") && board[1][1] == " - ") {
+					board[1][1] = " O ";
+				} else if (move.equals("12") && board[1][2] == " - ") {
+					board[1][2] = " O ";
+				} else if (move.equals("20") && board[2][0] == " - ") {
+					board[2][0] = " O ";
+				} else if (move.equals("21") && board[2][1] == " - ") {
+					board[2][1] = " O ";
+				} else if (move.equals("22") && board[2][2] == " - ") {
+					board[2][2] = " O ";
 				} else {
 					System.out.println("That is not a valid move");
 				}
@@ -153,11 +153,11 @@ public class TicTacToe {
 				System.out.println();
 			}
 
-			if (win == 'X') {
+			if (win == " X ") {
 				System.out.println("Computer Won");
-			} else if (win == 'o') {
+			} else if (win == " O ") {
 				System.out.println("Human Won");
-			} else if (win == 'd') {
+			} else if (win == "d") {
 				System.out.println("Game is a Draw");
 			}
 		} else {
@@ -174,28 +174,28 @@ public class TicTacToe {
 
 			if (f == 1) {
 				// then it is 00
-				board[0][0] = 'X';
+				board[0][0] = " X ";
 				firstMove = "00";
 				// System.out.println("CHECK");
 			} else if (f == 2) {
 				// then it is 02
-				board[0][2] = 'X';
+				board[0][2] = " X ";
 				firstMove = "02";
 				// System.out.println("CHECK");
 			} else if (f == 3) {
 				// then it is 20
-				board[2][0] = 'X';
+				board[2][0] = " X ";
 				firstMove = "20";
 				// System.out.println("CHECK");
 			} else if (f == 4) {
 				// then it is 20
-				board[2][2] = 'X';
+				board[2][2] = " X ";
 				firstMove = "22";
 				// System.out.println("CHECK");
 			} else {
 				// else is for safety reason
 				// then it is 22
-				board[2][2] = 'X';
+				board[2][2] = " X ";
 				firstMove = "22";
 				// System.out.pFrintln("CHECK");
 			}
@@ -204,17 +204,17 @@ public class TicTacToe {
 		// second move
 		if (counter == 2) {
 
-			if (board[1][1] == '-') {
-				board[1][1] = 'X';
+			if (board[1][1] == " - ") {
+				board[1][1] = " X ";
 			} else {
 				if (firstMove.equals("00")) {
-					board[0][2] = 'X';
+					board[0][2] = " X ";
 				} else if (firstMove.equals("02")) {
-					board[2][2] = 'X';
+					board[2][2] = " X ";
 				} else if (firstMove.equals("20")) {
-					board[2][2] = 'X';
+					board[2][2] = " X ";
 				} else if (firstMove.equals("22")) {
-					board[0][2] = 'X';
+					board[0][2] = " X ";
 				}
 			}
 			end = won();
@@ -224,14 +224,14 @@ public class TicTacToe {
 		if (counter == 3) {
 			int second[] = thirdMove();
 			if (second[0] != 5) {
-				board[second[0]][second[1]] = 'X';
+				board[second[0]][second[1]] = " X ";
 			} else {
 				int secondMy[] = thirdMyMove();
 				if (secondMy[0] != 5) {
-					board[secondMy[0]][secondMy[1]] = 'X';
+					board[secondMy[0]][secondMy[1]] = " X ";
 				} else {
 					secondMy = noOtherOption();
-					board[secondMy[0]][secondMy[1]] = 'X';
+					board[secondMy[0]][secondMy[1]] = " X ";
 				}
 			}
 			end = won();
@@ -243,14 +243,14 @@ public class TicTacToe {
 				int second[] = thirdMove();
 				if (second[0] != 5) {
 					// System.out.println("CHECK");
-					board[second[0]][second[1]] = 'X';
+					board[second[0]][second[1]] = " X ";
 				} else {
 					int secondMy[] = thirdMyMove();
 					if (secondMy[0] != 5) {
-						board[secondMy[0]][secondMy[1]] = 'X';
+						board[secondMy[0]][secondMy[1]] = " X ";
 					} else {
 						secondMy = noOtherOption();
-						board[secondMy[0]][secondMy[1]] = 'X';
+						board[secondMy[0]][secondMy[1]] = " X ";
 					}
 				}
 			}
@@ -262,14 +262,14 @@ public class TicTacToe {
 				int second[] = thirdMove();
 				if (second[0] != 5) {
 					// System.out.println("CHECK");
-					board[second[0]][second[1]] = 'X';
+					board[second[0]][second[1]] = " X ";
 				} else {
 					int secondMy[] = thirdMyMove();
 					if (secondMy[0] != 5) {
-						board[secondMy[0]][secondMy[1]] = 'X';
+						board[secondMy[0]][secondMy[1]] = " X ";
 					} else {
 						secondMy = noOtherOption();
-						board[secondMy[0]][secondMy[1]] = 'X';
+						board[secondMy[0]][secondMy[1]] = " X ";
 					}
 				}
 			}
@@ -283,76 +283,76 @@ public class TicTacToe {
 		int[] ret = new int[2];
 		ret[0] = 5;
 
-		if (board[0][0] == 'O' && board[0][1] == 'O' && board[0][2] == '-') {
+		if (board[0][0] == " O " && board[0][1] == " O " && board[0][2] == " - ") {
 			ret[0] = 0;
 			ret[1] = 2;
-		} else if (board[0][0] == 'O' && board[1][0] == 'O' && board[2][0] == '-') {
+		} else if (board[0][0] == " O " && board[1][0] == " O " && board[2][0] == " - ") {
 			ret[0] = 2;
 			ret[1] = 0;
-		} else if (board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == '-') {
+		} else if (board[0][0] == " O " && board[1][1] == " O " && board[2][2] == " - ") {
 			ret[0] = 2;
 			ret[1] = 2;
-		} else if (board[0][1] == 'O' && board[0][2] == 'O' && board[0][0] == '-') {
+		} else if (board[0][1] == " O " && board[0][2] == " O " && board[0][0] == " - ") {
 			ret[0] = 0;
 			ret[1] = 0;
-		} else if (board[0][1] == 'O' && board[1][1] == 'O' && board[2][1] == '-') {
-			ret[0] = 2;
-			ret[1] = 1;
-		} else if (board[0][2] == 'O' && board[1][1] == 'O' && board[2][0] == '-') {
-			ret[0] = 2;
-			ret[1] = 0;
-		} else if (board[0][2] == 'O' && board[1][2] == 'O' && board[2][2] == '-') {
-			ret[0] = 2;
-			ret[1] = 2;
-		} else if (board[1][0] == 'O' && board[1][1] == 'O' && board[1][2] == '-') {
-			ret[0] = 1;
-			ret[1] = 2;
-		} else if (board[1][0] == 'O' && board[2][0] == 'O' && board[0][0] == '-') {
-			ret[0] = 0;
-			ret[1] = 0;
-		} else if (board[2][0] == 'O' && board[1][1] == 'O' && board[0][2] == '-') {
-			ret[0] = 0;
-			ret[1] = 2;
-		} else if (board[2][1] == 'O' && board[1][1] == 'O' && board[0][1] == '-') {
-			ret[0] = 0;
-			ret[1] = 1;
-		} else if (board[2][2] == 'O' && board[1][1] == 'O' && board[0][0] == '-') {
-			ret[0] = 0;
-			ret[1] = 0;
-		} else if (board[1][1] == 'O' && board[1][2] == 'O' && board[1][0] == '-') {
-			ret[0] = 1;
-			ret[1] = 0;
-		} else if (board[2][2] == 'O' && board[1][2] == 'O' && board[0][2] == '-') {
-			ret[0] = 0;
-			ret[1] = 2;
-		} else if (board[2][0] == 'O' && board[2][1] == 'O' && board[2][2] == '-') {
-			ret[0] = 2;
-			ret[1] = 2;
-		} else if (board[2][1] == 'O' && board[2][2] == 'O' && board[2][0] == '-') {
-			ret[0] = 2;
-			ret[1] = 0;
-		} else if (board[0][0] == 'O' && board[0][2] == 'O' && board[0][1] == '-') {
-			ret[0] = 0;
-			ret[1] = 1;
-		} else if (board[0][0] == 'O' && board[2][0] == 'O' && board[1][0] == '-') {
-			ret[0] = 1;
-			ret[1] = 0;
-		} else if (board[0][2] == 'O' && board[2][2] == 'O' && board[1][2] == '-') {
-			ret[0] = 1;
-			ret[1] = 2;
-		} else if (board[2][0] == 'O' && board[2][2] == 'O' && board[2][1] == '-') {
+		} else if (board[0][1] == " O " && board[1][1] == " O " && board[2][1] == " - ") {
 			ret[0] = 2;
 			ret[1] = 1;
-		} else if (board[0][0] == 'O' && board[2][2] == 'O' && board[1][1] == '-') {
+		} else if (board[0][2] == " O " && board[1][1] == " O " && board[2][0] == " - ") {
+			ret[0] = 2;
+			ret[1] = 0;
+		} else if (board[0][2] == " O " && board[1][2] == " O " && board[2][2] == " - ") {
+			ret[0] = 2;
+			ret[1] = 2;
+		} else if (board[1][0] == " O " && board[1][1] == " O " && board[1][2] == " - ") {
+			ret[0] = 1;
+			ret[1] = 2;
+		} else if (board[1][0] == " O " && board[2][0] == " O " && board[0][0] == " - ") {
+			ret[0] = 0;
+			ret[1] = 0;
+		} else if (board[2][0] == " O " && board[1][1] == " O " && board[0][2] == " - ") {
+			ret[0] = 0;
+			ret[1] = 2;
+		} else if (board[2][1] == " O " && board[1][1] == " O " && board[0][1] == " - ") {
+			ret[0] = 0;
+			ret[1] = 1;
+		} else if (board[2][2] == " O " && board[1][1] == " O " && board[0][0] == " - ") {
+			ret[0] = 0;
+			ret[1] = 0;
+		} else if (board[1][1] == " O " && board[1][2] == " O " && board[1][0] == " - ") {
+			ret[0] = 1;
+			ret[1] = 0;
+		} else if (board[2][2] == " O " && board[1][2] == " O " && board[0][2] == " - ") {
+			ret[0] = 0;
+			ret[1] = 2;
+		} else if (board[2][0] == " O " && board[2][1] == " O " && board[2][2] == " - ") {
+			ret[0] = 2;
+			ret[1] = 2;
+		} else if (board[2][1] == " O " && board[2][2] == " O " && board[2][0] == " - ") {
+			ret[0] = 2;
+			ret[1] = 0;
+		} else if (board[0][0] == " O " && board[0][2] == " O " && board[0][1] == " - ") {
+			ret[0] = 0;
+			ret[1] = 1;
+		} else if (board[0][0] == " O " && board[2][0] == " O " && board[1][0] == " - ") {
+			ret[0] = 1;
+			ret[1] = 0;
+		} else if (board[0][2] == " O " && board[2][2] == " O " && board[1][2] == " - ") {
+			ret[0] = 1;
+			ret[1] = 2;
+		} else if (board[2][0] == " O " && board[2][2] == " O " && board[2][1] == " - ") {
+			ret[0] = 2;
+			ret[1] = 1;
+		} else if (board[0][0] == " O " && board[2][2] == " O " && board[1][1] == " - ") {
 			ret[0] = 1;
 			ret[1] = 1;
-		} else if (board[0][2] == 'O' && board[2][0] == 'O' && board[1][1] == '-') {
+		} else if (board[0][2] == " O " && board[2][0] == " O " && board[1][1] == " - ") {
 			ret[0] = 1;
 			ret[1] = 1;
-		} else if (board[0][1] == 'O' && board[2][1] == 'O' && board[1][1] == '-') {
+		} else if (board[0][1] == " O " && board[2][1] == " O " && board[1][1] == " - ") {
 			ret[0] = 1;
 			ret[1] = 1;
-		} else if (board[1][0] == 'O' && board[1][2] == 'O' && board[1][1] == '-') {
+		} else if (board[1][0] == " O " && board[1][2] == " O " && board[1][1] == " - ") {
 			ret[0] = 1;
 			ret[1] = 1;
 		}
@@ -362,76 +362,76 @@ public class TicTacToe {
 	public static int[] thirdMyMove() {
 		int[] ret = new int[2];
 		ret[0] = 5;
-		if (board[0][0] == 'X' && board[0][1] == 'X' && board[0][2] == '-') {
+		if (board[0][0] == " X " && board[0][1] == " X " && board[0][2] == " - ") {
 			ret[0] = 0;
 			ret[1] = 2;
-		} else if (board[0][0] == 'X' && board[1][0] == 'X' && board[2][0] == '-') {
+		} else if (board[0][0] == " X " && board[1][0] == " X " && board[2][0] == " - ") {
 			ret[0] = 2;
 			ret[1] = 0;
-		} else if (board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == '-') {
+		} else if (board[0][0] == " X " && board[1][1] == " X " && board[2][2] == " - ") {
 			ret[0] = 2;
 			ret[1] = 2;
-		} else if (board[0][1] == 'X' && board[0][2] == 'X' && board[0][0] == '-') {
+		} else if (board[0][1] == " X " && board[0][2] == " X " && board[0][0] == " - ") {
 			ret[0] = 0;
 			ret[1] = 0;
-		} else if (board[0][1] == 'X' && board[1][1] == 'X' && board[2][1] == '-') {
-			ret[0] = 2;
-			ret[1] = 1;
-		} else if (board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == '-') {
-			ret[0] = 2;
-			ret[1] = 0;
-		} else if (board[0][2] == 'X' && board[1][2] == 'X' && board[2][2] == '-') {
-			ret[0] = 2;
-			ret[1] = 2;
-		} else if (board[1][0] == 'X' && board[1][1] == 'X' && board[1][2] == '-') {
-			ret[0] = 1;
-			ret[1] = 2;
-		} else if (board[1][0] == 'X' && board[2][0] == 'X' && board[0][0] == '-') {
-			ret[0] = 0;
-			ret[1] = 0;
-		} else if (board[2][0] == 'X' && board[1][1] == 'X' && board[0][2] == '-') {
-			ret[0] = 0;
-			ret[1] = 2;
-		} else if (board[2][1] == 'X' && board[1][1] == 'X' && board[0][1] == '-') {
-			ret[0] = 0;
-			ret[1] = 1;
-		} else if (board[2][2] == 'X' && board[1][1] == 'X' && board[0][0] == '-') {
-			ret[0] = 0;
-			ret[1] = 0;
-		} else if (board[1][1] == 'X' && board[1][2] == 'X' && board[1][0] == '-') {
-			ret[0] = 1;
-			ret[1] = 0;
-		} else if (board[2][2] == 'X' && board[1][2] == 'X' && board[0][2] == '-') {
-			ret[0] = 0;
-			ret[1] = 2;
-		} else if (board[2][0] == 'X' && board[2][1] == 'X' && board[2][2] == '-') {
-			ret[0] = 2;
-			ret[1] = 2;
-		} else if (board[2][1] == 'X' && board[2][2] == 'X' && board[2][0] == '-') {
-			ret[0] = 2;
-			ret[1] = 0;
-		} else if (board[0][0] == 'X' && board[0][2] == 'X' && board[0][1] == '-') {
-			ret[0] = 0;
-			ret[1] = 1;
-		} else if (board[0][0] == 'X' && board[2][0] == 'X' && board[1][0] == '-') {
-			ret[0] = 1;
-			ret[1] = 0;
-		} else if (board[0][2] == 'X' && board[2][2] == 'X' && board[1][2] == '-') {
-			ret[0] = 1;
-			ret[1] = 2;
-		} else if (board[2][0] == 'X' && board[2][2] == 'X' && board[2][1] == '-') {
+		} else if (board[0][1] == " X " && board[1][1] == " X " && board[2][1] == " - ") {
 			ret[0] = 2;
 			ret[1] = 1;
-		} else if (board[0][0] == 'X' && board[2][2] == 'X' && board[1][1] == '-') {
+		} else if (board[0][2] == " X " && board[1][1] == " X " && board[2][0] == " - ") {
+			ret[0] = 2;
+			ret[1] = 0;
+		} else if (board[0][2] == " X " && board[1][2] == " X " && board[2][2] == " - ") {
+			ret[0] = 2;
+			ret[1] = 2;
+		} else if (board[1][0] == " X " && board[1][1] == " X " && board[1][2] == " - ") {
+			ret[0] = 1;
+			ret[1] = 2;
+		} else if (board[1][0] == " X " && board[2][0] == " X " && board[0][0] == " - ") {
+			ret[0] = 0;
+			ret[1] = 0;
+		} else if (board[2][0] == " X " && board[1][1] == " X " && board[0][2] == " - ") {
+			ret[0] = 0;
+			ret[1] = 2;
+		} else if (board[2][1] == " X " && board[1][1] == " X " && board[0][1] == " - ") {
+			ret[0] = 0;
+			ret[1] = 1;
+		} else if (board[2][2] == " X " && board[1][1] == " X " && board[0][0] == " - ") {
+			ret[0] = 0;
+			ret[1] = 0;
+		} else if (board[1][1] == " X " && board[1][2] == " X " && board[1][0] == " - ") {
+			ret[0] = 1;
+			ret[1] = 0;
+		} else if (board[2][2] == " X " && board[1][2] == " X " && board[0][2] == " - ") {
+			ret[0] = 0;
+			ret[1] = 2;
+		} else if (board[2][0] == " X " && board[2][1] == " X " && board[2][2] == " - ") {
+			ret[0] = 2;
+			ret[1] = 2;
+		} else if (board[2][1] == " X " && board[2][2] == " X " && board[2][0] == " - ") {
+			ret[0] = 2;
+			ret[1] = 0;
+		} else if (board[0][0] == " X " && board[0][2] == " X " && board[0][1] == " - ") {
+			ret[0] = 0;
+			ret[1] = 1;
+		} else if (board[0][0] == " X " && board[2][0] == " X " && board[1][0] == " - ") {
+			ret[0] = 1;
+			ret[1] = 0;
+		} else if (board[0][2] == " X " && board[2][2] == " X " && board[1][2] == " - ") {
+			ret[0] = 1;
+			ret[1] = 2;
+		} else if (board[2][0] == " X " && board[2][2] == " X " && board[2][1] == " - ") {
+			ret[0] = 2;
+			ret[1] = 1;
+		} else if (board[0][0] == " X " && board[2][2] == " X " && board[1][1] == " - ") {
 			ret[0] = 1;
 			ret[1] = 1;
-		} else if (board[0][2] == 'X' && board[2][0] == 'X' && board[1][1] == '-') {
+		} else if (board[0][2] == " X " && board[2][0] == " X " && board[1][1] == " - ") {
 			ret[0] = 1;
 			ret[1] = 1;
-		} else if (board[0][1] == 'X' && board[2][1] == 'X' && board[1][1] == '-') {
+		} else if (board[0][1] == " X " && board[2][1] == " X " && board[1][1] == " - ") {
 			ret[0] = 1;
 			ret[1] = 1;
-		} else if (board[1][0] == 'X' && board[1][2] == 'X' && board[1][1] == '-') {
+		} else if (board[1][0] == " X " && board[1][2] == " X " && board[1][1] == " - ") {
 			ret[0] = 1;
 			ret[1] = 1;
 		}
@@ -443,7 +443,7 @@ public class TicTacToe {
 		ret[0] = 5;
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				if (board[i][j] == '-') {
+				if (board[i][j] == " - ") {
 					ret[0] = i;
 					ret[1] = j;
 					break;
@@ -462,37 +462,37 @@ public class TicTacToe {
 		// <editor-fold defaultstate="collapsed" desc="first move of the computer">
 		if (counter == 1) {
 			// if the human moved in the center
-			if (board[1][1] == 'O') {
+			if (board[1][1] == " O ") {
 				Random rand = new Random();
 				int f = rand.nextInt(4) + 1;
 				if (f == 1) {
 					// then it is 00
-					board[0][0] = 'X';
+					board[0][0] = " X ";
 					firstMove = "00";
 					// System.out.println("CHECK");
 				} else if (f == 2) {
 					// then it is 00
-					board[0][2] = 'X';
+					board[0][2] = " X ";
 					firstMove = "02";
 					// System.out.println("CHECK");
 				} else if (f == 3) {
 					// then it is 00
-					board[2][0] = 'X';
+					board[2][0] = " X ";
 					firstMove = "20";
 					// System.out.println("CHECK");
 				} else if (f == 4) {
 					// then it is 00
-					board[2][2] = 'X';
+					board[2][2] = " X ";
 					firstMove = "22";
 					// System.out.println("CHECK");
 				} else {
 					// then it is 00
-					board[2][2] = 'X';
+					board[2][2] = " X ";
 					firstMove = "22";
 					// System.out.println("CHECK");
 				}
 			} else {
-				board[1][1] = 'X';
+				board[1][1] = " X ";
 				firstMove = "11";
 			}
 
@@ -502,40 +502,40 @@ public class TicTacToe {
 			int second[] = thirdMove();
 			// if there is no defensice move
 			if (second[0] == 5) {
-				if (board[1][1] != 'X') {
-					if (firstMove == "00" && board[0][2] == '-') {
-						board[0][2] = 'X';
-					} else if (firstMove == "00" && board[2][0] == '-') {
-						board[2][0] = 'X';
-					} else if (firstMove == "02" && board[0][0] == '-') {
-						board[0][0] = 'X';
-					} else if (firstMove == "02" && board[2][2] == '-') {
-						board[2][2] = 'X';
-					} else if (firstMove == "20" && board[0][0] == '-') {
-						board[0][0] = 'X';
-					} else if (firstMove == "20" && board[2][2] == '-') {
-						board[2][2] = 'X';
-					} else if (firstMove == "22" && board[2][0] == '-') {
-						board[2][0] = 'X';
-					} else if (firstMove == "22" && board[0][2] == '-') {
-						board[0][2] = 'X';
+				if (board[1][1] != " X ") {
+					if (firstMove == "00" && board[0][2] == " - ") {
+						board[0][2] = " X ";
+					} else if (firstMove == "00" && board[2][0] == " - ") {
+						board[2][0] = " X ";
+					} else if (firstMove == "02" && board[0][0] == " - ") {
+						board[0][0] = " X ";
+					} else if (firstMove == "02" && board[2][2] == " - ") {
+						board[2][2] = " X ";
+					} else if (firstMove == "20" && board[0][0] == " - ") {
+						board[0][0] = " X ";
+					} else if (firstMove == "20" && board[2][2] == " - ") {
+						board[2][2] = " X ";
+					} else if (firstMove == "22" && board[2][0] == " - ") {
+						board[2][0] = " X ";
+					} else if (firstMove == "22" && board[0][2] == " - ") {
+						board[0][2] = " X ";
 					}
 				} else {
-					if (board[0][0] == '-') {
-						board[0][0] = 'X';
-					} else if (board[0][2] == '-') {
-						board[0][2] = 'X';
-					} else if (board[2][0] == '-') {
-						board[2][0] = 'X';
-					} else if (board[2][2] == '-') {
-						board[2][2] = 'X';
+					if (board[0][0] == " - ") {
+						board[0][0] = " X ";
+					} else if (board[0][2] == " - ") {
+						board[0][2] = " X ";
+					} else if (board[2][0] == " - ") {
+						board[2][0] = " X ";
+					} else if (board[2][2] == " - ") {
+						board[2][2] = " X ";
 					}
 				}
 
 			}
 			// if there is a defensive move
 			else {
-				board[second[0]][second[1]] = 'X';
+				board[second[0]][second[1]] = " X ";
 			}
 
 		}
@@ -545,20 +545,20 @@ public class TicTacToe {
 				int second[] = thirdMove();
 				if (second[0] != 5) {
 					// System.out.println("CHECK");
-					board[second[0]][second[1]] = 'X';
+					board[second[0]][second[1]] = " X ";
 				} else {
 					int secondMy[] = thirdMyMove();
 					if (secondMy[0] != 5) {
-						board[secondMy[0]][secondMy[1]] = 'X';
+						board[secondMy[0]][secondMy[1]] = " X ";
 					} else {
 						secondMy = noOtherOption();
-						board[secondMy[0]][secondMy[1]] = 'X';
+						board[secondMy[0]][secondMy[1]] = " X ";
 					}
 				}
 			}
 			if (!end) {
 				end = true;
-				win = 'd';
+				win = "d";
 			}
 			end = won();
 		}
@@ -569,20 +569,20 @@ public class TicTacToe {
 				int second[] = thirdMove();
 				if (second[0] != 5) {
 					// System.out.println("CHECK");
-					board[second[0]][second[1]] = 'X';
+					board[second[0]][second[1]] = " X ";
 				} else {
 					int secondMy[] = thirdMyMove();
 					if (secondMy[0] != 5) {
-						board[secondMy[0]][secondMy[1]] = 'X';
+						board[secondMy[0]][secondMy[1]] = " X ";
 					} else {
 						secondMy = noOtherOption();
-						board[secondMy[0]][secondMy[1]] = 'X';
+						board[secondMy[0]][secondMy[1]] = " X ";
 					}
 				}
 			}
 			if (!end) {
 				end = true;
-				win = 'd';
+				win = "d";
 			}
 			won();
 		}
@@ -595,14 +595,14 @@ public class TicTacToe {
 				int second[] = thirdMove();
 				if (second[0] != 5) {
 					// System.out.println("CHECK");
-					board[second[0]][second[1]] = 'X';
+					board[second[0]][second[1]] = " X ";
 				} else {
 					int secondMy[] = thirdMyMove();
 					if (secondMy[0] != 5) {
-						board[secondMy[0]][secondMy[1]] = 'X';
+						board[secondMy[0]][secondMy[1]] = " X ";
 					} else {
 						secondMy = noOtherOption();
-						board[secondMy[0]][secondMy[1]] = 'X';
+						board[secondMy[0]][secondMy[1]] = " X ";
 					}
 				}
 			}
@@ -615,165 +615,165 @@ public class TicTacToe {
 	public static boolean won() {
 		boolean won = false;
 
-		if (board[0][0] == 'O' && board[0][1] == 'O' && board[0][2] == 'O') {
+		if (board[0][0] == " O " && board[0][1] == " O " && board[0][2] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[0][0] == 'O' && board[1][0] == 'O' && board[2][0] == 'O') {
+			win = " O ";
+		} else if (board[0][0] == " O " && board[1][0] == " O " && board[2][0] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[0][0] == 'O' && board[1][1] == 'O' && board[2][2] == 'O') {
+			win = " O ";
+		} else if (board[0][0] == " O " && board[1][1] == " O " && board[2][2] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[0][1] == 'O' && board[0][2] == 'O' && board[0][0] == 'O') {
+			win = " O ";
+		} else if (board[0][1] == " O " && board[0][2] == " O " && board[0][0] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[0][1] == 'O' && board[1][1] == 'O' && board[2][1] == 'O') {
+			win = " O ";
+		} else if (board[0][1] == " O " && board[1][1] == " O " && board[2][1] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[0][2] == 'O' && board[1][1] == 'O' && board[2][0] == 'O') {
+			win = " O ";
+		} else if (board[0][2] == " O " && board[1][1] == " O " && board[2][0] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[0][2] == 'O' && board[1][2] == 'O' && board[2][2] == 'O') {
+			win = " O ";
+		} else if (board[0][2] == " O " && board[1][2] == " O " && board[2][2] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[1][0] == 'O' && board[1][1] == 'O' && board[1][2] == 'O') {
+			win = " O ";
+		} else if (board[1][0] == " O " && board[1][1] == " O " && board[1][2] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[1][0] == 'O' && board[2][0] == 'O' && board[0][0] == 'O') {
+			win = " O ";
+		} else if (board[1][0] == " O " && board[2][0] == " O " && board[0][0] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[2][0] == 'O' && board[1][1] == 'O' && board[0][2] == 'O') {
+			win = " O ";
+		} else if (board[2][0] == " O " && board[1][1] == " O " && board[0][2] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[2][1] == 'O' && board[1][1] == 'O' && board[0][1] == 'O') {
+			win = " O ";
+		} else if (board[2][1] == " O " && board[1][1] == " O " && board[0][1] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[2][2] == 'O' && board[1][1] == 'O' && board[0][0] == 'O') {
+			win = " O ";
+		} else if (board[2][2] == " O " && board[1][1] == " O " && board[0][0] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[1][1] == 'O' && board[1][2] == 'O' && board[1][0] == 'O') {
+			win = " O ";
+		} else if (board[1][1] == " O " && board[1][2] == " O " && board[1][0] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[2][2] == 'O' && board[1][2] == 'O' && board[0][2] == 'O') {
+			win = " O ";
+		} else if (board[2][2] == " O " && board[1][2] == " O " && board[0][2] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[2][0] == 'O' && board[2][1] == 'O' && board[2][2] == 'O') {
+			win = " O ";
+		} else if (board[2][0] == " O " && board[2][1] == " O " && board[2][2] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[2][1] == 'O' && board[2][2] == 'O' && board[2][0] == 'O') {
+			win = " O ";
+		} else if (board[2][1] == " O " && board[2][2] == " O " && board[2][0] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[0][0] == 'O' && board[0][2] == 'O' && board[0][1] == 'O') {
+			win = " O ";
+		} else if (board[0][0] == " O " && board[0][2] == " O " && board[0][1] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[0][0] == 'O' && board[2][0] == 'O' && board[1][0] == 'O') {
+			win = " O ";
+		} else if (board[0][0] == " O " && board[2][0] == " O " && board[1][0] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[0][2] == 'O' && board[2][2] == 'O' && board[1][2] == 'O') {
+			win = " O ";
+		} else if (board[0][2] == " O " && board[2][2] == " O " && board[1][2] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[2][0] == 'O' && board[2][2] == 'O' && board[2][1] == 'O') {
+			win = " O ";
+		} else if (board[2][0] == " O " && board[2][2] == " O " && board[2][1] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[0][0] == 'O' && board[2][2] == 'O' && board[1][1] == 'O') {
+			win = " O ";
+		} else if (board[0][0] == " O " && board[2][2] == " O " && board[1][1] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[0][2] == 'O' && board[2][0] == 'O' && board[1][1] == 'O') {
+			win = " O ";
+		} else if (board[0][2] == " O " && board[2][0] == " O " && board[1][1] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[0][1] == 'O' && board[2][1] == 'O' && board[1][1] == 'O') {
+			win = " O ";
+		} else if (board[0][1] == " O " && board[2][1] == " O " && board[1][1] == " O ") {
 			won = true;
-			win = 'o';
-		} else if (board[1][0] == 'O' && board[1][2] == 'O' && board[1][1] == 'O') {
+			win = " O ";
+		} else if (board[1][0] == " O " && board[1][2] == " O " && board[1][1] == " O ") {
 			won = true;
-			win = 'o';
+			win = " O ";
 		}
 
-		if (board[0][0] == 'X' && board[0][1] == 'X' && board[0][2] == 'X') {
+		if (board[0][0] == " X " && board[0][1] == " X " && board[0][2] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[0][0] == 'X' && board[1][0] == 'X' && board[2][0] == 'X') {
+			win = " X ";
+		} else if (board[0][0] == " X " && board[1][0] == " X " && board[2][0] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[0][0] == 'X' && board[1][1] == 'X' && board[2][2] == 'X') {
+			win = " X ";
+		} else if (board[0][0] == " X " && board[1][1] == " X " && board[2][2] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[0][1] == 'X' && board[0][2] == 'X' && board[0][0] == 'X') {
+			win = " X ";
+		} else if (board[0][1] == " X " && board[0][2] == " X " && board[0][0] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[0][1] == 'X' && board[1][1] == 'X' && board[2][1] == 'X') {
+			win = " X ";
+		} else if (board[0][1] == " X " && board[1][1] == " X " && board[2][1] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[0][2] == 'X' && board[1][1] == 'X' && board[2][0] == 'X') {
+			win = " X ";
+		} else if (board[0][2] == " X " && board[1][1] == " X " && board[2][0] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[0][2] == 'X' && board[1][2] == 'X' && board[2][2] == 'X') {
+			win = " X ";
+		} else if (board[0][2] == " X " && board[1][2] == " X " && board[2][2] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[1][0] == 'X' && board[1][1] == 'X' && board[1][2] == 'X') {
+			win = " X ";
+		} else if (board[1][0] == " X " && board[1][1] == " X " && board[1][2] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[1][0] == 'X' && board[2][0] == 'X' && board[0][0] == 'X') {
+			win = " X ";
+		} else if (board[1][0] == " X " && board[2][0] == " X " && board[0][0] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[2][0] == 'X' && board[1][1] == 'X' && board[0][2] == 'X') {
+			win = " X ";
+		} else if (board[2][0] == " X " && board[1][1] == " X " && board[0][2] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[2][1] == 'X' && board[1][1] == 'X' && board[0][1] == 'X') {
+			win = " X ";
+		} else if (board[2][1] == " X " && board[1][1] == " X " && board[0][1] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[2][2] == 'X' && board[1][1] == 'X' && board[0][0] == 'X') {
+			win = " X ";
+		} else if (board[2][2] == " X " && board[1][1] == " X " && board[0][0] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[1][1] == 'X' && board[1][2] == 'X' && board[1][0] == 'X') {
+			win = " X ";
+		} else if (board[1][1] == " X " && board[1][2] == " X " && board[1][0] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[2][2] == 'X' && board[1][2] == 'X' && board[0][2] == 'X') {
+			win = " X ";
+		} else if (board[2][2] == " X " && board[1][2] == " X " && board[0][2] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[2][0] == 'X' && board[2][1] == 'X' && board[2][2] == 'X') {
+			win = " X ";
+		} else if (board[2][0] == " X " && board[2][1] == " X " && board[2][2] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[2][1] == 'X' && board[2][2] == 'X' && board[2][0] == 'X') {
+			win = " X ";
+		} else if (board[2][1] == " X " && board[2][2] == " X " && board[2][0] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[0][0] == 'X' && board[0][2] == 'X' && board[0][1] == 'X') {
+			win = " X ";
+		} else if (board[0][0] == " X " && board[0][2] == " X " && board[0][1] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[0][0] == 'X' && board[2][0] == 'X' && board[1][0] == 'X') {
+			win = " X ";
+		} else if (board[0][0] == " X " && board[2][0] == " X " && board[1][0] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[0][2] == 'X' && board[2][2] == 'X' && board[1][2] == 'X') {
+			win = " X ";
+		} else if (board[0][2] == " X " && board[2][2] == " X " && board[1][2] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[2][0] == 'X' && board[2][2] == 'X' && board[2][1] == 'X') {
+			win = " X ";
+		} else if (board[2][0] == " X " && board[2][2] == " X " && board[2][1] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[0][0] == 'X' && board[2][2] == 'X' && board[1][1] == 'X') {
+			win = " X ";
+		} else if (board[0][0] == " X " && board[2][2] == " X " && board[1][1] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[0][2] == 'X' && board[2][0] == 'X' && board[1][1] == 'X') {
+			win = " X ";
+		} else if (board[0][2] == " X " && board[2][0] == " X " && board[1][1] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[0][1] == 'X' && board[2][1] == 'X' && board[1][1] == 'X') {
+			win = " X ";
+		} else if (board[0][1] == " X " && board[2][1] == " X " && board[1][1] == " X ") {
 			won = true;
-			win = 'X';
-		} else if (board[1][0] == 'X' && board[1][2] == 'X' && board[1][1] == 'X') {
+			win = " X ";
+		} else if (board[1][0] == " X " && board[1][2] == " X " && board[1][1] == " X ") {
 			won = true;
-			win = 'X';
+			win = " X ";
 		}
 
 		boolean dash = true;
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				if (board[i][j] == '-') {
+				if (board[i][j] == " - ") {
 					dash = false;
 				}
 			}
 		}
 
 		if (dash) {
-			win = 'd';
+			win = "d";
 			won = true;
 		}
 
