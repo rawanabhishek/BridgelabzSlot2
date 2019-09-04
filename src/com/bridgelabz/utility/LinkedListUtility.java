@@ -5,8 +5,8 @@ package com.bridgelabz.utility;
 public class LinkedListUtility {
 	
       public class Node{
-    	  String data;
-    	  Node next;
+    	  public String data;
+    	  public Node next;
       }
 
 	Node head;
