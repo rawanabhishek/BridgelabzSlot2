@@ -71,7 +71,7 @@ public class LinkedListUtility {
 			n.next=n1.next;
 		}
 	}
-	public void inserAtstart(String data) {
+	public void insertAtstart(String data) {
 		Node node=new Node();
 		node.data=data;
 		node.next=null;
@@ -79,6 +79,12 @@ public class LinkedListUtility {
 		head=node;
 		
 	}
+	
+	
+	/****************************************************************************************************/
+	
+	
+	
 
 }
 

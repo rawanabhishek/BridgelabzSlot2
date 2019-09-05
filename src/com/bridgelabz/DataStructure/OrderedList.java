@@ -3,23 +3,26 @@ package com.bridgelabz.DataStructure;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 import com.bridgelabz.utility.LinkedListUtility;
+import com.bridgelabz.utility.LinkedListUtilityInt;
 
-public class UnorderedList {
+public class OrderedList {
 
 	public static void main(String[] args) throws IOException {
 
-		LinkedListUtility utility = new LinkedListUtility();
+		LinkedListUtilityInt utility = new LinkedListUtilityInt();
 
 		Scanner scanner = new Scanner(System.in);
 		// Reading the string from the file
-		BufferedReader br = new BufferedReader(new FileReader(
-				"/home/admin1/git/BridgelabzSlot2/" + "src/com/bridgelabz/TextFiles/unorderedlistinput"));
+		BufferedReader br = new BufferedReader(
+				new FileReader("/home/admin1/git/BridgelabzSlot2/" + "src/com/bridgelabz/TextFiles/orderedlistinput"));
 
 		String str = "";
 		try {
@@ -34,44 +37,48 @@ public class UnorderedList {
 		}
 
 		String[] strArray = str.split(",");
+		int arr[] = new int[strArray.length];
 
 		for (int i = 0; i < strArray.length; i++) {
-			utility.insert(strArray[i]);
+			arr[i] = Integer.parseInt(strArray[i]);
+
+		}
+
+		Arrays.sort(arr);
+		for (int i = 0; i < strArray.length; i++) {
+			utility.insert(arr[i]);
 
 		}
 
 		utility.show();
 		System.out.println();
-		System.out.println("Enter a name you want to search : ");
-		String name = scanner.next();
-		int count = 1;
-		
-		 if(count<strArray.length) {
-				
-				for (int i = 0; i < strArray.length; i++) {
-					count++;
-				if (name.equals(strArray[i])) {
-					utility.deleteAt(i);
-					
+		System.out.println("Enter a number you want to search : ");
+		int num = scanner.nextInt();
 
-					break;
-				}
-				 else if(count>strArray.length){
-						utility.insertAtstart(name);
-						
-					}
-				}
-				}
-                
-			
+		for (int i = 0; i < strArray.length; i++) {
+
+			if (num == arr[i]) {
+				utility.deleteAt(i);
+
+				break;
+			}
+			else if(arr[i]>num) {
+				utility.insertAt(i, num);
+				break;
+			}
+			else if(num>arr.length) {
+				utility.insert(num);
+				break;
+			}
+		}
 		
-		System.out.println();
+		
 		utility.SaveToFile();
-		scanner.close();
 		
-		String strWrite=LinkedListUtility.Write;
+		String strWrite=LinkedListUtilityInt.Write;
+		//writing to the output file 
 		try {
-			File file=new File("/home/admin1/git/BridgelabzSlot2/src/com/bridgelabz/TextFiles/unorderdlistoutput");
+			File file=new File("/home/admin1/git/BridgelabzSlot2/src/com/bridgelabz/TextFiles/orderedlistoutput");
 			FileWriter fileWriter = new FileWriter(file);
 			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 			bufferedWriter.write(strWrite);
@@ -82,7 +89,5 @@ public class UnorderedList {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
-
 }
