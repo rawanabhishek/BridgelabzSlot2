@@ -34,18 +34,19 @@ public class UnorderedList {
 		}
 
 		String[] strArray = str.split(",");
-
+        //inserting the string in the linked list
 		for (int i = 0; i < strArray.length; i++) {
 			utility.insert(strArray[i]);
 
 		}
-
+         //printing the list
 		utility.show();
 		System.out.println();
+		//taking input string from user to search it in the list
 		System.out.println("Enter a name you want to search : ");
 		String name = scanner.next();
 		int count = 1;
-		
+		//checking weather is name string is present in the list or not
 		 if(count<strArray.length) {
 				
 				for (int i = 0; i < strArray.length; i++) {
@@ -69,7 +70,9 @@ public class UnorderedList {
 		utility.SaveToFile();
 		scanner.close();
 		
+		
 		String strWrite=LinkedListUtility.Write;
+		//writing the update list to the file 
 		try {
 			File file=new File("/home/admin1/git/BridgelabzSlot2/src/com/bridgelabz/TextFiles/unorderdlistoutput");
 			FileWriter fileWriter = new FileWriter(file);
