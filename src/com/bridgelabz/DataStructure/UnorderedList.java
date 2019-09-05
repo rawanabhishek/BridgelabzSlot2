@@ -1,7 +1,10 @@
 package com.bridgelabz.DataStructure;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
@@ -22,7 +25,7 @@ public class UnorderedList {
 		try {
 
 			str = str + br.readLine();
-			
+
 			br.close();
 
 		} catch (IOException e) {
@@ -41,18 +44,44 @@ public class UnorderedList {
 		System.out.println();
 		System.out.println("Enter a name you want to search : ");
 		String name = scanner.next();
+		int count = 1;
+		
+		 if(count<strArray.length) {
+				
+				for (int i = 0; i < strArray.length; i++) {
+					count++;
+				if (name.equals(strArray[i])) {
+					utility.deleteAt(i);
+					
 
-		for (int i = 0; i < strArray.length; i++) {
-			if (name.equals(strArray[i])) {
-				utility.deleteAt(i);
-			} else {
-				utility.inserAtstart(name);
-				break;
-			}
-		}
+					break;
+				}
+				 else if(count>strArray.length){
+						utility.inserAtstart(name);
+						
+					}
+				}
+				}
+                
+			
+		
 		System.out.println();
-		utility.show();
+		utility.SaveToFile();
 		scanner.close();
+		
+		String strWrite=LinkedListUtility.Write;
+		try {
+			File file=new File("/home/admin1/git/BridgelabzSlot2/src/com/bridgelabz/TextFiles/unorderdlistoutput");
+			FileWriter fileWriter = new FileWriter(file);
+			BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+			bufferedWriter.write(strWrite);
+			bufferedWriter.close();
+			System.out.println();
+			System.out.println("Write successfully");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 	}
 

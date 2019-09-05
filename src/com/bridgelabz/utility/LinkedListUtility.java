@@ -9,7 +9,7 @@ public class LinkedListUtility {
     	  public Node next;
       }
 
-	Node head;
+	static Node head;
 	public void insert(String data) {
 	
 		
@@ -29,16 +29,29 @@ public class LinkedListUtility {
 			n.next = node;
 		}
 	}
-
-	public void show() {
+  public static String Write=" ";
+	public  static void  show() {
 		Node node = head;
 		while (node.next != null) {
 			System.out.println(node.data);
+			
 			node = node.next;
 
 		}
 		System.out.println(node.data);
 		
+	}
+	
+	public  static void  SaveToFile() {
+		Node node = head;
+		while (node.next != null) {
+			System.out.println(node.data);
+			Write+=" "+node.data;
+			node = node.next;
+
+		}
+		System.out.println(node.data);
+		Write+=" "+node.data;
 	}
 	
 	
