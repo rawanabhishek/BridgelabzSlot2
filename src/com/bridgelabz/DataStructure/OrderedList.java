@@ -15,6 +15,7 @@ import com.bridgelabz.utility.LinkedListUtilityInt;
 
 public class OrderedList {
 
+	public static int size;
 	public static void main(String[] args) throws IOException {
 
 		LinkedListUtilityInt utility = new LinkedListUtilityInt();
@@ -39,40 +40,27 @@ public class OrderedList {
 		String[] strArray = str.split(",");
 		int arr[] = new int[strArray.length];
 
+		//inserting the value into the list
 		for (int i = 0; i < strArray.length; i++) {
 			arr[i] = Integer.parseInt(strArray[i]);
-
-		}
-
-		Arrays.sort(arr);
-		for (int i = 0; i < strArray.length; i++) {
 			utility.insert(arr[i]);
-
 		}
+        size=arr.length;
+		//Arrays.sort(arr);
+		
+		utility.show();
+		System.out.println("Sorted list is : ");
+		utility.Sort();
 
 		utility.show();
 		System.out.println();
 		System.out.println("Enter a number you want to search : ");
 		int num = scanner.nextInt();
 
-		for (int i = 0; i < strArray.length; i++) {
 
-			if (num == arr[i]) {
-				utility.deleteAt(i);
-
-				break;
-			}
-			else if(arr[i]>num) {
-				utility.insertAt(i, num);
-				break;
-			}
-			else if(num>arr.length) {
-				utility.insert(num);
-				break;
-			}
-		}
-		
-		
+		utility.SearchByKey(num);
+		utility.Sort();
+		utility.show();
 		utility.SaveToFile();
 		
 		String strWrite=LinkedListUtilityInt.Write;

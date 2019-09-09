@@ -13,7 +13,7 @@ public class BubbleSort {
 
 	public static void main(String[] args) {
 
-		int a []= {36,54,19,29,13,4};
+		int a []= {2,3,4,1,6,9,7,8};
 		int temp;
 		for(int i =0;i<a.length;i++) {
 			int flag =0;
