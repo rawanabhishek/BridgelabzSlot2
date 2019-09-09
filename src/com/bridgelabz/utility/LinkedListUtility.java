@@ -45,12 +45,12 @@ public class LinkedListUtility {
 	public  static void  SaveToFile() {
 		Node node = head;
 		while (node.next != null) {
-			System.out.println(node.data);
+			
 			Write+=" "+node.data;
 			node = node.next;
 
 		}
-		System.out.println(node.data);
+		
 		Write+=" "+node.data;
 	}
 	

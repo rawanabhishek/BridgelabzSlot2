@@ -78,7 +78,7 @@ public class CashCounter {
 					break;
 
 				} else {
-					System.out.println("bank does not have that muc hamount ");
+					System.out.println("bank does not have that much amount ");
 					que.deQueue();
 					break;
 				}
